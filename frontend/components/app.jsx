@@ -2,7 +2,7 @@ import React from "react";
 
 const App = () => (
   <div className = 'app'>
-    <h1>noisecloudddd</h1>
+    <h1>Welcome to NoiseCloud</h1>
       {/* <Modal/>
 
       <NavBarContainer/>
