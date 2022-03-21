@@ -2,7 +2,8 @@ import React from "react";
 
 const App = () => (
   <div className = 'app'>
-      <Modal/>
+    <h1>noisecloudddd</h1>
+      {/* <Modal/>
 
       <NavBarContainer/>
 
@@ -11,7 +12,7 @@ const App = () => (
           <ProtectedRoute exact path="/discover" component={DiscoverContainer}/>
       </Switch>
 
-      <TrackPlayBarContainer/>
+      <TrackPlayBarContainer/> */}
   </div>
 );
 
