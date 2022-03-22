@@ -1,0 +1,128 @@
+/* NAVBAR css */
+
+.navbar {
+top: 0%;
+justify-content: center;
+background-color: #333;
+height: 46px;
+width: 100vw;
+position: fixed;
+z-index: 9999;
+}
+
+
+.nav-holder {
+width: 1240px;
+height: 46px;
+margin-right: auto;
+margin-left: auto;
+display: flex;
+}
+
+.navbar button:hover {
+color: #fff;
+}
+
+.navbar div:hover {
+color: #fff;
+}
+
+.logo {
+text-decoration: none;
+height: 46px;
+width: 69px;
+font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+background-color: #ff5502;
+color: #fff;
+border: none;
+cursor: pointer;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.logo i {
+font-size: 25px;
+}
+
+.header-nav {
+text-decoration: none;
+cursor: pointer;
+display: block;
+padding: 12px 1px 12px 0px;
+border: none;
+border-right: 1px solid #111;
+box-sizing: border-box;
+text-align: center;
+height: 46px;
+width: 104px;
+color: #ccc;
+background-color: #333;
+font: 70 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+}
+
+.discover-search {
+background-color: #333;
+height: 28px;
+width: 393.484px;
+top: -20%;
+position: relative;
+appearance: none;
+padding: 9px 10px 8px 10px;
+}
+
+.discover-search > input {
+padding: 5px 7px 5px 7px;
+background-color: #e5e5e5;
+border-radius: 5px;
+width: 379.484px;
+height: 18px;
+border: none;
+word-spacing: normal;
+letter-spacing: normal;
+text-rendering: auto;
+text-align: start;
+font: 400 13.3333px Arial;
+}
+
+
+.upload-header {
+text-decoration: none;
+cursor: pointer;
+display: block;
+padding: 14px 10px 12px 13px;
+height: 20px;
+background-color: #333;
+color: #ccc;
+border: none;
+width: 64.08px;
+font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+}
+
+.profile-header {
+text-decoration: none;
+cursor: pointer;
+display: block;
+padding: 14px 10px 12px 13px;
+height: 20px;
+background-color: #333;
+color: #ccc;
+border: none;
+width: 64.08px;
+font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+}
+
+.logout-header {
+text-decoration: none;
+cursor: pointer;
+display: block;
+padding: 14px 10px 12px 13px;
+height: 20px;
+background-color: #333;
+color: #ccc;
+border: none;
+width: 64.08px;
+font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+}

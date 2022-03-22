@@ -1,18 +1,25 @@
 import React from "react";
+import NavBarContainer from './navbar/navbar_container'
 
 const App = () => (
   <div className = 'app'>
-    <h1>Welcome to NoiseCloud</h1>
+    <h1><NavBarContainer/></h1>
+
       {/* <Modal/>
 
-      <NavBarContainer/>
+      <header>
+        <NavBarContainer/>
+      </header>
 
       <Switch>
           <AuthRoute exact path="/" component={SplashContainer}/>
           <ProtectedRoute exact path="/discover" component={DiscoverContainer}/>
       </Switch>
 
-      <TrackPlayBarContainer/> */}
+      <footer>
+        <TrackPlayBarContainer/>
+      </footer> */}
+
   </div>
 );
 
