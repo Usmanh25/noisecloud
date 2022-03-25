@@ -1,0 +1,384 @@
+.login-button {
+    cursor: pointer;
+    background-color: rgba(14, 13, 13, 0.755);
+    padding: 6px 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: #fff;
+    width: 90px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.signup-button {
+    cursor: pointer;
+    padding: 6px 15px;
+    background-color: #ff5502;
+    border-color: #ff5502;
+    color: #fff;
+    font-weight: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.splash-container {
+    background-color: #f2f2f2;
+}
+
+.greeting-container {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    width: 1200px;
+    margin: 0 auto;
+    object-fit: cover;
+    background-image: url(https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_c-318d7eed.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.noisecloud-logo {
+    color: white;
+    font-size: 100px;
+    margin-top: -20px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.trending-music-div {
+    width: 1200px;
+    background-color: #fff;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* searchbar container */
+
+.searchbar-container {
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+    height: 65px;
+}
+
+.searchbar-container > p {
+    margin-top: 75px;
+    margin-right: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.searchbar {
+    height: 40px;
+    width: 500px;
+    margin-top: 60px;
+    margin-right: 15px;
+    border: none;
+}
+
+.or {
+    font-size: 15px;
+}
+
+.upload-your-own-button {
+    cursor: pointer;
+    margin-top: 60px;
+    border-color: hsl(20, 89%, 48%);
+    background-color: hsl(20, 89%, 48%);
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    padding: 10px 24px;
+    height: 50px;
+}
+
+.trending-tracks-title {
+    text-align: center;
+    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 24px;
+    color: #333333;
+    margin-left: 23%;
+    height: 500px;
+}
+// .splash-songs {
+//     width: 1200px;
+//     height: 350px;
+//     background-color: #fff;
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+// .song-splash {
+//     width: 179px;
+//     height: 179px;
+//     margin-left: 15px;
+//     margin-bottom: 30px;
+// }
+
+// .song-splash img {
+//     width: 179px;
+//     height: 179px;
+// }
+
+
+input[type="text"].searchbar {
+    background-color:#f2f2f2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+    color: #333333;
+}
+
+
+
+.explore-trending-playlists-button {
+    cursor: pointer;
+    background-color: #ff5502;
+    border-color: #ff5502;
+    color: #fff;
+    margin-left: 37%;
+    height: 50px;
+    padding: 13px 15px 15px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+}
+
+.mobile-banner {
+    width: 1200px;
+    background-color: #f2f2f2;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mobile-info {
+    width: 400px;
+}
+
+.mobile-info > h2 {
+    color: #333;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-top: 25%;
+    margin-left: 10%;
+    width: 500px;
+    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 35px;
+}
+
+.under-line {
+    width: 70px;
+    height: 3px;
+    background-image: linear-gradient(90deg,#7d01a1,#f30 50%,#f50);
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.mobile-info-text {
+    color: #333;
+    width: 300px;
+    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+    margin-left: 10%;
+    margin-top: 5%;
+    line-height: 35px;
+    overflow-wrap: break-word;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.mobile-picture {
+    background-image: url(https://a-v2.sndcdn.com/assets/images/never_stop_listening@1x-9c5264ff.jpg);
+    width: 850px;
+    height: 450px;
+    margin-left: 5%;
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.calling-all-creators {
+    width: 1200px;
+    background-color: #fff;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url(https://a-v2.sndcdn.com/assets/images/hp_creator_image_featured_artists-798050ae.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.cac-header {
+    color: #fff;
+    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+    width: 500px;
+    height: 36px;
+    margin-left: 6%;
+    margin-top: 7%;
+    font-size: 36px;
+}
+
+.cac-text {
+    margin-left: 6%;
+    margin-top: 2%;
+    line-height: 30px;
+    color: #fff;
+    width: 500px;
+    font-size: 23px;
+    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.35;
+    font-weight: 100;
+}
+
+.cac-button {
+   cursor: pointer;
+    margin-top: 2%;
+    margin-left: 6%;
+    border-radius: 5px;
+    width: 170px;
+    padding: 13px 24px;
+    font-size: 18px;
+    background: transparent;
+    color: #fff;
+    border-color: #ccc;
+    line-height: 18px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    font-weight: 100;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Bottom container */
+
+.bottom-container {
+    width: 1200px;
+    background-color: #fff;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.thanks-for-listening {
+    margin-top: 10%;
+    margin-left: 31%;
+    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 100;
+    color: #333;
+    letter-spacing: -1px;
+}
+
+.save-tracks {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-size: 12px / 1.4;
+    margin-top: 2%;
+    margin-left: 24%;
+    font-weight: 100;
+    color: #333;
+}
+
+.bottom-signup-button {
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #f50;
+    border-color: #f50;
+    width: 200px;
+    height: 50px;
+    padding: 13px 23px;
+    font-size: 18px;
+    margin-left: 43%;
+    margin-top: 2%;
+    min-width: 200px;
+    transition: opacity .2s linear;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+
+.bottom-signin {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.bottom-signin > p {
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333333;
+    margin-right: 1%;
+    margin-top: 1.1%;
+    margin-left: 6%;
+}
+
+.bottom-signin > button {
+    cursor: pointer;
+    color: #333333;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 80px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    margin-right: 3%;
+}
+
+/* footer */
+
+.fine-print {
+    width: 1200px;
+    background-color:#fff;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.fine-print > hr {
+    margin-top: 0px;
+    color:#cccccc;
+    width: 1160px;
+}
+
+.fine-print > p {
+    font-size: 14px;
+    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+    color: #cccccc;
+    margin-left: 20px;
+    line-height: 30px;
+}
+
+// .dot-container {
+//     text-align: center;
+// }
+
+// .dot {
+//   cursor: pointer;
+//   height: 15px;
+//   width: 15px;
+//   margin: 0 2px;
+//   background-color: #bbb;
+//   border-radius: 50%;
+//   display: inline-block;
+//   transition: background-color 0.6s ease;
+// }

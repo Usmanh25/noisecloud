@@ -16,4 +16,5 @@
 
 
 @import "./navbar.scss";
-@import "./modal.scss"
+@import "./modal.scss";
+@import "./splash.scss";

@@ -22,7 +22,7 @@ export const removeSessionErrors = () => ({
     type: REMOVE_SESSION_ERRORS
 })
 
-export const signup = user => dispatch (
+export const signup = user => dispatch => (
     SessionApiUtil.signup(user).then(user => (
         dispatch(receiveCurrentUser(user))
     ), err => (
@@ -34,7 +34,7 @@ export const login = user => dispatch => (
     SessionApiUtil.login(user).then(user => (
       dispatch(receiveCurrentUser(user))
     ), err => (
-      dispatch(receiveErrors(err.responseJSON))
+      dispatch(receiveSessionErrors(err.responseJSON))
     ))
 );
 

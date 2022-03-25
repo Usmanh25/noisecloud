@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import { removeSessionErrors } from '../../actions/session_actions';
 
 function Modal({modal, closeModal}) {
     if (!modal) {
@@ -21,24 +22,28 @@ function Modal({modal, closeModal}) {
     }
     return (
       <div className="modal-background" onClick={closeModal}>
-        <div className="modal-child" onClick={e => e.stopPropagation()}>
+        <div className="modal-background" onClick={e => e.stopPropagation()}>
           { component }
         </div>
       </div>
     );
   }
-  
-  const mapStateToProps = state => {
-    return {
-      modal: state.ui.modal
-    };
+
+
+const mapStateToProps = state => {
+  return {
+    modal: state.ui.modal
   };
+};
   
-  const mapDispatchToProps = dispatch => {
-    return {
-      closeModal: () => dispatch(closeModal())
-    };
+const mapDispatchToProps = dispatch => {
+  return {
+    closeModal: () => {
+      dispatch(closeModal());
+      dispatch(removeSessionErrors());
+    }
   };
-  
-  export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);
   

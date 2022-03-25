@@ -8,7 +8,7 @@ class NavBar extends React.Component {
     }
 
     render() {
-        const {logout} = this.props
+        const {logout, currentUser} = this.props
         return (
             <div>
               <div className="navbar">
@@ -32,7 +32,7 @@ class NavBar extends React.Component {
                   </Link>
 
                   <Link className="profile-header" to="/user/userId">
-                    UserXYZ
+                    { currentUser.email }
                   </Link>
 
                   <Link className="logout-header" to="/">
