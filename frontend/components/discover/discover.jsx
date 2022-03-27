@@ -7,7 +7,11 @@ class Discover extends React.Component {
     }
 
     render() {
-        null
+        return (
+            <div>
+                This is discover.jsx
+            </div>
+        )
     }
 
 

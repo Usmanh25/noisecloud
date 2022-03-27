@@ -14,12 +14,61 @@ class Splash extends React.Component{
 
         return ( 
             <div className="splash-container">
+
                 <div className="slideshow-container">
-                    <div className="greeting-container">
-                        <h1 className="noisecloud-logo">☁️</h1>
-                        <GreetingContainer />
-                    </div>
+
+                    <span>
+                        <h1 className="noisecloud-logo">
+                            ☁️     
+                            <span className='xc'>
+                                <button className="login-button" onClick={() => this.props.openModal("login")}>Sign in</button>
+                                <button className="signup-button" onClick={() => this.props.openModal("signup")}>Create account</button>
+                            </span>
+                        </h1>
+                    </span>
+                    <br />
+                    <h2 className='txt'>What's next in music is first on NoiseCloud</h2>
+                    <br />
+                    <p className='ptxt1'>
+                        Upload your first track and begin your journey. NoiseCloud gives
+                    </p>
+                    <br />
+                    <p className='ptxt2'>
+                        you space to create, find your fans, and connect with other 
+                    </p>
+                    <br />
+                    <p className='ptxt3'>
+                        artists
+                    </p>
+                    <br />
+                    <button className="start-uploading-today-button" onClick={() => this.props.openModal("signup")}>Start Uploading Today</button>
+
                 </div>
+
+                    <br />
+
+
+
+                    {/* <span>
+                        <p className='ptag'>What's next in music is first on NoiseCloud</p>
+                        <br />
+                        <p className='ptag2'>UNDERTEST</p>
+                        <button className="upload-your-own-button" onClick={() => this.props.openModal("signup")}>Start Uploading Today</button>
+                    </span> */}
+
+{/* 
+
+                    <div className = 'header-middle-div'>
+                        <h1>What's next in music is first on NoiseCloud</h1>
+                        <br />
+                        <h2>Upload your first track and begin your journey. SoundCloud gives 
+                            you space to create, find your fans, and connect 
+                            with other artists</h2>
+                        <button className="upload-your-own-button" onClick={() => this.props.openModal("signup")}>Start Uploading Today</button>
+                    </div>
+                    <br /> */}
+
+                    
 
                 <div className="trending-music-div">
                     <div className="searchbar-container">

@@ -56,22 +56,20 @@ class SessionForm extends React.Component {
               <form onSubmit={this.handleSubmit} className="login-form-box">
                 <br/>
                 <div modal-social-login>
-                    <input className="modal-button"
+                    <input className="modal-button1"
                       type='submit'
-                      value='Demo'
+                      value='Continue with Demo'
                       onClick={this.handleDemoSubmit}
                     />
                 </div>
                 <br />
                 {this.renderErrors()}
-                <div className="modal-divider">
-                  <p>or</p>
-                </div>
+                <div className="or-with-bars">or</div>
                 <div className="modal-form">
                   <br/>
                   <label>
                     <input type="text"
-                      placeholder="email"
+                      placeholder="Your email address"
                       value={this.state.email}
                       onChange={this.update('email')}
                       className="modal-input"
@@ -80,16 +78,15 @@ class SessionForm extends React.Component {
                   <br/>
                   <label>
                     <input type="password"
-                      placeholder="password"
+                      placeholder="Your password"
                       value={this.state.password}
                       onChange={this.update('password')}
                       className="modal-input"
                     />
                   </label>
                   <br/>
-                  <input className="modal-button" type="submit" value={this.props.formType} />
-                  <p>We won't be using your email for anything, except to take up space in our database. You can never unsubscribe - you're here forever!</p>
-                  <p>We may use information you provide us to do absolutely nothing.</p>
+                  <input className="modal-button2" type="submit" value={this.props.formType} />
+                  <p className="terms">When registering, you agree that we may use your provided data for the registration and to send you notifications on our products and services. You can unsubscribe from notifications at any time in your settings. For additional info please refer to our Privacy Policy.</p>
                 </div>
               </form>
             </div>

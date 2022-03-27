@@ -1,6 +1,5 @@
 import { fetchTracks } from '../../actions/track_actions'
 import {connect} from 'react-redux'
-// import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
 import Discover from './discover'
 
 const mSTP = state => ({

@@ -1,59 +1,154 @@
 .login-button {
     cursor: pointer;
-    background-color: rgba(14, 13, 13, 0.755);
+    background-color: black;
+    border: 1px solid white;
     padding: 6px 15px;
-    margin-top: 20px;
-    margin-right: 20px;
-    color: #fff;
-    width: 90px;
+    margin-right: 5px;
+    color: white;
+    width: 80px;
     border-radius: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.xc {
+    margin-left: 1000px;
+    margin-top: -85px;
+    margin-bottom: 100px;
+    display: flex;
+
 }
 
 .signup-button {
-    cursor: pointer;
+    cursor: pointer; 
     padding: 6px 15px;
     background-color: #ff5502;
-    border-color: #ff5502;
+    border: none;
     color: #fff;
     font-weight: 50px;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin-left: 5px;
     border-radius: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.noisecloud-logo {
+    // color: white;
+    font-size: 80px;
+    margin-top: 1px;
+    margin-left: 20px;
+    // font-weight: bold;
+    display: inline-block
 }
 
 .splash-container {
-    background-color: #f2f2f2;
+    background-color: none;
+
 }
 
-.greeting-container {
-    display: flex;
-    justify-content: space-between;
-    height: 500px;
-    width: 1200px;
-    margin: 0 auto;
-    object-fit: cover;
-    background-image: url(https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_c-318d7eed.jpg);
-    background-color: #cccccc;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+// .greeting-container {
+//     // display: flex;
+//     // justify-content: space-between;
+//     // height: px;
+//     // width: 1000px;
+//     // margin: auto;
+//     background-color: yellow;
 
+//     // display: flex;
+//     // flex-wrap: wrap;
 
-.noisecloud-logo {
+//     // margin-left: 130px;
+//     // object-fit: cover;
+//     // background-image: url(https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_featured_artists-8081257b.jpg);
+//     // background-size: cover;
+//     // background-repeat: no-repeat;
+//     // background-position: center;
+
+//     // width: 1250px;
+//     // background-color: green;
+//     // height: 800px;
+//     // margin: 0 auto;
+//     // display: flex;
+//     // flex-wrap: wrap;
+// }
+
+.txt {
     color: white;
-    font-size: 100px;
-    margin-top: -20px;
-    margin-left: 10px;
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font: 32px Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    text-align: center;
+    margin-top: -50px;
 }
+
+.ptxt1 {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: -45px;
+
+
+
+    // font: 12px Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif
+}
+.ptxt2 {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: -40px;
+
+
+
+    // font: 12px Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif
+}
+.ptxt3 {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: -35px;
+
+
+
+    // font: 12px Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif
+}
+
+.slideshow-container {
+
+    width: 1240px;
+    margin: 0 auto;
+
+    height: 460px;
+
+    // background-color: black;
+
+    // width: 1250px;
+    // background-color: green;
+    // height: 800px;
+    // margin: 0 auto;
+    // display: flex;
+    // flex-wrap: wrap;
+
+    background-image: url(https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_featured_artists-8081257b.jpg);
+
+    // padding:0;
+    // margin:0;
+    // margin-top: -1%;
+    // margin-left: -1%;
+    // margin-right: -1%;
+    // margin-bottom: -8%;
+    // top:0;
+    // left:0;
+
+    // height: 0%;
+}
+
+
+
+
 
 .trending-music-div {
-    width: 1200px;
-    background-color: #fff;
+
+    width: 1250px;
+    background-color: none;
     height: 800px;
     margin: 0 auto;
     display: flex;
@@ -86,17 +181,6 @@
     font-size: 15px;
 }
 
-.upload-your-own-button {
-    cursor: pointer;
-    margin-top: 60px;
-    border-color: hsl(20, 89%, 48%);
-    background-color: hsl(20, 89%, 48%);
-    color: #fff;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-radius: 5px;
-    padding: 10px 24px;
-    height: 50px;
-}
 
 .trending-tracks-title {
     text-align: center;
@@ -114,7 +198,7 @@
 //     flex-wrap: wrap;
 // }
 
-// .song-splash {
+// .song-splash { pink
 //     width: 179px;
 //     height: 179px;
 //     margin-left: 15px;
@@ -151,8 +235,8 @@ input[type="text"].searchbar {
 }
 
 .mobile-banner {
-    width: 1200px;
-    background-color: #f2f2f2;
+    width: 1250px;
+    background-color: none;
     height: 450px;
     margin: 0 auto;
     display: flex;
@@ -166,7 +250,7 @@ input[type="text"].searchbar {
 .mobile-info > h2 {
     color: #333;
     font-weight: 100;
-    line-height: 1.2;
+    line-height: 1.2; 
     margin-top: 25%;
     margin-left: 10%;
     width: 500px;
@@ -205,7 +289,7 @@ input[type="text"].searchbar {
 }
 
 .calling-all-creators {
-    width: 1200px;
+    width: 1250px;
     background-color: #fff;
     height: 400px;
     margin: 0 auto;
@@ -382,3 +466,49 @@ input[type="text"].searchbar {
 //   display: inline-block;
 //   transition: background-color 0.6s ease;
 // }
+
+.header-middle-div {
+    background-color: blue;
+    font-family: 'Arial';
+    color: white;
+    border: 5px solid #FFFF00;
+}
+
+.ptag {
+    background-color: none;
+    margin-left: 500px;
+    color: red;
+    font-size: 30px;
+    margin-top: -300px;
+}
+.ptag2 {
+    background-color: none;
+    margin-left: 500px;
+    color: red;
+    font-size: 30px;
+    margin-top: -50px;
+}
+
+.upload-your-own-button {
+    cursor: pointer;
+    border: 3px solid hsl(20, 89%, 48%);
+    background-color: hsl(20, 89%, 48%);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    padding: 10px 24px;
+    height: 50px;
+    margin-top: 58px;
+    margin-left: 16px;
+}
+.start-uploading-today-button {
+    cursor: pointer;
+    border: 3px solid hsl(20, 89%, 48%);
+    background-color: hsl(20, 89%, 48%);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    padding: 10px 24px;
+    height: 50px;
+    margin-left: 525px;
+}

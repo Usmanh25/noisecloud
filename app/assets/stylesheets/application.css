@@ -14,7 +14,10 @@
  *= require_self
  */
 
+ 
+
 
 @import "./navbar.scss";
 @import "./modal.scss";
 @import "./splash.scss";
+@import "./upload.scss";

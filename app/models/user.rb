@@ -37,3 +37,21 @@ class User < ApplicationRecord
   
 end
   
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1420751757000",
+      "Effect": "Allow",
+      "Principal": {
+          "AWS": "arn:aws:iam::9002-7886-5283:user/{YOUR-USER-NAME}"
+      },
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::noisecloud-dev",
+        "arn:aws:s3:::noisecloud-dev"
+      ]
+    }
+  ]
+}

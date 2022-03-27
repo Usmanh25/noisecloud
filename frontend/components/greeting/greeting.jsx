@@ -12,12 +12,15 @@ class Greeting extends React.Component {
                 <h1>{currentUser.username}</h1>
                 <button onClick={() => logout(currentUser.id)}>Log Out</button>
             </div>
+            
+
+
         )
         let sessionLinks = () => (
-            <nav>
+            <div>
                 <button className="login-button" onClick={() => this.props.openModal("login")}>Sign in</button>
                 <button className="signup-button" onClick={() => this.props.openModal("signup")}>Create account</button>
-            </nav>
+            </div>
         )
         return currentUser ? greetingUser() : sessionLinks()
     }
