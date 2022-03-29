@@ -1,22 +1,22 @@
 /* NAVBAR css */
 
 .navbar {
-top: 0%;
-justify-content: center;
-background-color: #333;
-height: 46px;
-width: 100vw;
-position: fixed;
-z-index: 9999;
+margin-left: -20px;
+margin-top: -8px// justify-content: center;
+// background-color: #333;
+// height: 46px;
+// width: 100vw;
+// position: fixed;
+// z-index: 0;
 }
 
 
 .nav-holder {
-width: 1240px;
+width: 100vw;
 height: 46px;
-margin-right: auto;
-margin-left: auto;
 display: flex;
+// background-color: #333;
+background-color: #333;
 }
 
 .navbar button:hover {
@@ -64,11 +64,10 @@ font: 70 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
 }
 
 .discover-search {
-background-color: #333;
-height: 28px;
-width: 393.484px;
-top: -20%;
-position: relative;
+// height: 28px;
+// width: 393.484px;
+margin-top: 1px;
+// position: relative;
 appearance: none;
 padding: 9px 10px 8px 10px;
 }

@@ -6,7 +6,7 @@ import {
 } from '../actions/track_playbar_actions'
 
 const _nullPlay = {
-    currentSong: null,
+    currentTrack: null,
     isPlaying: false
 }
 
@@ -17,7 +17,7 @@ const trackPlaybarReducer = (state = _nullPlay, action) => {
 
     switch(action.type) {
         case RECEIVE_PLAY_TRACK:
-            nextState.currentSong = action.song
+            nextState.currentTrack = action.song
             nextState.isPlaying = true
             return nextState
         case REMOVE_PLAY_TRACK:

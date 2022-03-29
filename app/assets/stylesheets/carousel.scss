@@ -1,0 +1,162 @@
+.carousel-container {
+    position: relative;
+    width: 820px;
+    height: 274px;
+  }
+  
+  .carousel-wrapper {
+    position: relative;
+    width: 820px;
+    height: 274px;
+    overflow-x: hidden;
+  }
+  
+  .carousel {
+    position: absolute;
+    transition: 0.5s;
+  }
+  
+  .carousel-prev-btn-wrapper {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    z-index: 1;
+    height: 240px;
+    left: -8px;
+    width: 46px;
+  }
+  
+  .carousel-next-btn-wrapper {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    z-index: 1;
+    height: 240px;
+    right: -8px;
+    width: 46px;
+  }
+  
+  .carousel-next-btn-shadow, .carousel-prev-btn-shadow  {
+    top: 0px;
+    height: 240px;
+    width: 100%;
+    transition: 2s;
+  }
+  
+  .carousel-prev-btn-shadow:hover {
+    background: linear-gradient( to right , rgba(37, 37, 37, 0.2), transparent);
+  
+    .carousel-prev-btn {
+      color: #f50;
+      border: 1px solid #f50;
+    }
+  
+    .carousel-prev-btn:after {
+      border-color: #f50;
+    }
+  }
+  
+  .carousel-next-btn-shadow:hover {
+    background: linear-gradient( to left , rgba(37, 37, 37, 0.2), transparent);
+    .carousel-next-btn {
+      color: #f50;
+      border: 1px solid #f50;
+    }
+    .carousel-next-btn:after {
+      border-color: #f50;
+    }
+  }
+  
+  .peekaboo {
+    animation: peekPrev;
+    animation-duration: 0.3s;
+  }
+  
+  @keyframes peekPrev {
+    0%{
+      transform: translateX(0%)
+    }
+    50% {
+      transform: translateX(2%)
+    }
+    100%{
+      transform: translateX(0%)
+    }
+  }
+  
+  .peekNext {
+    animation: peekNext;
+    animation-duration: 0.3s;
+  }
+  
+  @keyframes peekNext {
+    0%{
+      left: 0px
+    }
+    50% {
+      left: -43px
+    }
+    100%{
+      left: 0px
+    }
+  }
+  
+  .carousel-next-btn, .carousel-prev-btn {
+    position: absolute;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    top: 0;
+    bottom: 78px;
+    margin: auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+    outline: 0;
+  }
+  
+  .carousel-next-btn {
+    right: 0px;
+  }
+  
+  .carousel-next-btn:after {
+    border-right: 1px solid #333;
+    border-top: 1px solid #333;
+    transform: rotate(45deg) translate(-1px,1px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    margin: auto;
+    height: 6px;
+    width: 6px;
+  }
+  
+  .carousel-prev-btn:after {
+    border-right: 1px solid #333;
+    border-top: 1px solid #333;
+    transform: rotate(-135deg) translate(-1px,1px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    margin: auto;
+    height: 6px;
+    width: 6px;
+  }
+  
+  .carousel-next-btn:hover, .carousel-prev-btn:hover {
+    color: #f50;
+    border: 1px solid #f50;
+  }
+  
+  .carousel-next-btn:hover:after, .carousel-prev-btn:hover:after {
+    border-right: 1px solid #f50;
+    border-top: 1px solid #f50;
+  }

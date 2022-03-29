@@ -6,23 +6,23 @@ export const REMOVE_TRACK = 'REMOVE_TRACK'
 export const RECEIVE_TRACK_ERRORS = 'RECEIVE_TRACK_ERRORS'
 export const REMOVE_TRACK_ERRORS = 'REMOVE_TRACK_ERRORS'
 
-const receiveTracks = tracks => ({
+export const receiveTracks = tracks => ({
     type: RECEIVE_TRACKS,
     tracks
 })
-const receiveTrack = track => ({
+export const receiveTrack = track => ({
     type: RECEIVE_TRACK,
     track
 })
-const removeTrack = trackId => ({
+export const removeTrack = trackId => ({
     type: REMOVE_TRACK,
     trackId
 })
-const receiveTrackErrors = errors => ({
+export const receiveTrackErrors = errors => ({
     type: RECEIVE_TRACK_ERRORS,
     errors
 })
-const removeTrackErrors = () => ({
+export const removeTrackErrors = () => ({
     type: REMOVE_TRACK_ERRORS
 })
 

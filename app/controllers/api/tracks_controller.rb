@@ -2,8 +2,8 @@ class Api::TracksController < ApplicationController
 
     def index
         @tracks = Track.all
-        render :index
-        # render 'api/tracks/index'
+        # render :index
+        render 'api/tracks/index'
     end
 
     def show

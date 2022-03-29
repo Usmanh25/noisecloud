@@ -3,43 +3,41 @@
 .app-discover1 {
     height: 100%;
     width: 100%;
-    background-color: #f2f2f2;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: none;
 }
 
 
 .creators-tab {
     width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 48px;
+    margin: auto;
+    height: 75px;
     padding: 0px, 30px, 0px, 30px;
-    background-color: #fff;
-    border-bottom: 1px solid #cccccc;
-    margin-top: 45px;
+    background-color: white;
+    margin-top: 30px;
 }
 
 .creators-tab ul {
     display: flex;
-    justify-content: left; 
+    // justify-content: left; 
 }
-.creators-tab li {
-    margin: 0px 3px 6px 20px;
+.creators-tab ul {
+
     color: #333;
-    border-bottom: 1px solid transparent;
     line-height: 48px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 30px;
 }
 
 #upload-only {
     color: #ff5500;
-    border-bottom: 1px solid #ff5500;
+    border-bottom: 2px solid #ff5500;
+    // margin-top: 50px;
+    margin-left: -40px;
 }
 
-.creators-tab li:hover {
-    border-bottom: 1px solid black;
+.creators-tab ul:hover {
+    border-bottom: 2px solid black;
 }
 
 
@@ -50,12 +48,13 @@
 .upload-main {
     width: 1240px;
     height: 100vh;
-    background: url(https://assets.lnwy.co/app/uploads/2017/10/10140549/00-soundcloud-rap-ryan-scott-hero-1-1200x900.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    background-image: url(https://va.sndcdn.com/up/ProU_CUPTO.jpg);
+    // background-repeat: no-repeat;
     background-position: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5px;
     padding-top: 10%;
 }
 
@@ -65,11 +64,12 @@
     width: 800px;
     margin: auto;
     /* margin-top: 15%; */
-    background-color: rgba(14, 13, 13, 0.755);
+    background-color: white;
     border: 1px solid rgba(14, 13, 13, 0.755);
     box-shadow: 0 2px 12px -5px rgba(0,0,0,.1);
     border-radius: 5px;
     text-align: center;
+    margin-top: 47px;
 }
 
 
@@ -78,7 +78,7 @@
     margin-top: 16%;
     font-size: 22px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #fff;
+    color: rgb(187, 185, 185);
 }
 
 .upload-screen input {

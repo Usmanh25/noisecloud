@@ -89,12 +89,13 @@ class Upload extends React.Component {
         return ( 
             <div>
                 <div className="app-discover1">
+
                     <div className="creators-tab">
                         <ul>
-                            <li id="upload-only">Upload</li>
-                            <li>Mastering</li>
-                            <li>Your Tracks</li>
-                            <li>Pro Plans</li>
+                            <ul id="upload-only">Upload</ul>
+                            <ul>Mastering</ul>
+                            <ul>Your Tracks</ul>
+                            <ul>Pro Plans</ul>
                         </ul>
                     </div>
                     

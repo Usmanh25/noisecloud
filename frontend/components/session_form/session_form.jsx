@@ -29,7 +29,18 @@ class SessionForm extends React.Component {
           email: 'Guest@gmail.com',
           password: '123456'
         })
-        this.props.processForm(user).then(this.closeModal)
+        const user2 = Object.assign({}, {
+          email: 'Guest@yahoo.com',
+          password: '123456'
+        })
+
+
+        if (this.props.formType === 'Login') {
+          this.props.processForm(user).then(this.closeModal)
+        } else if (this.props.formType === 'Signup') {
+          this.props.processLoginForm(user2).then(this.closeModal)
+        }
+
     }
 
     closeModal() {
@@ -94,6 +105,5 @@ class SessionForm extends React.Component {
         );
       }
     }
-    
-    export default withRouter(SessionForm);
+export default withRouter(SessionForm);
     
