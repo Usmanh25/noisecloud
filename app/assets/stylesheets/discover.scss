@@ -1,178 +1,176 @@
-.content-container {
-    background: white;
-    width: 1240px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    padding-bottom: 75px;
-    padding-top: 46px;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-  }
-  
-  .content-wrapper {
-    min-height: 100vh;
-    padding: 0 30px;
-  }
-  
-  .content-playlist-main-wrapper {
-    display: block;
-    margin-right: 330px;
-    padding-top: 30px;
-    border-right: 1px solid #eaeaea;
-  }
-  
-  
-  .content-playlist-li {
-    margin-bottom: 34px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  
-  .content-playlist-li:last-child {
-    margin-bottom: 0px;
-    border: none;
-  }
-  
-  .content-playlist-wrapper {
-    min-height: 100vh;
-    position: relative;
-    padding-right: 30px;
-  }
-  
-  .content-playlist-header-wrapper {
-    margin-bottom: 24px;
-    margin-top: 10px;
-  }
-  
-  .content-playlist-header {
-    font-size: 23px;
-    color: #333;
-  }
-  
-  .content-playlist-header-description {
-    margin-top: 10px;
-    font-size: 14px;
-  }
-  
-  .content-list-item {
-    width: 172px;
-    margin-bottom: 34px;
-    margin-right: 20px;
-    animation: background-in-comment;
-    animation-duration: 0.9s;
-  }
-  
-  .content-list-item-title-link {
-    display: contents;
-    text-decoration: none;
-    color: #111;
-    font-size: 14px;
-  }
-  
-  .content-list-item-uploader {
-    font-size: 11px;
-  }
-  
-  .content-item-username-link {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #999;
-    text-decoration: none;
-    transition: 0.2s;
-  }
-  
-  .content-list-item-genre {
-    font-size: 11px;
-    color: #999;
-  }
-  
-  .content-list-item-wrapper {
-    color: #111;
-    text-decoration: none;
-  }
-  
-  .content-list-item-img-link {
-    display: flex;
-    height: 172px;
-    width: 172px;
-  }
-  
-  .content-list-item-playbtn-container {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    height: 60px;
-    width: 60px;
-    margin: auto;
-  }
-  
-  .content-list-item-img-wrapper {
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .content-list-item-img {
-    height: 172px;
-    width: 172px;
-  }
-  
-  .content-list-item-img-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background: linear-gradient( 0deg ,rgba(0,0,0,.4),transparent);
-    opacity: 0;
-    transition: 0.3s;
-  }
-  
-  .content-list-item-img-wrapper:hover {
-    .content-list-item-playbtn-container {
-      display: block
-    }
-    .content-list-item-img-footer {
-      opacity: 1;
-    }
-  }
-  
-  
-  .content-list-item-description div{
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 100%;
-    margin-top: 5px;
-    line-height: 1.4;
-  }
-  
-  .content-description {
-    color: #111;
-    font-size: 14px;
-    padding: 10px 0;
-  }
-  
-  .content-list-ul {
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-  }
-  
-  .homepage-spinner {
-    position: absolute;
-  
-    top: 40%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0px auto;
-  }
+.discover-main {
+  background-color: rgb(235, 235, 235);
+  width: 100vw;
+  margin-left: -17px;
+}
+.discover-co-main {
+  display: flex;
+  justify-content: space-between;
+  width: 1227px;
+  background-color: white;
+  margin: auto;
+  font-family: 'Oxygen';
+  padding-bottom: 50px;
+};
+
+.track-genre {
+  width: 800px;
+  margin: 38px 30px;
+  padding: 0px 30px 0px 0px;
+  border-right: 1px solid rgb(219, 219, 219);
+};
+
+.tracks-list {
+  border-bottom: 1px solid rgb(219, 219, 219);
+  padding: 0px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
+}
+
+.track-list {
+  display: flex;
+  height: 235px;
+  overflow-x: auto;
+};
+
+.genre-header {
+  margin: 0px 0px 10px 0px;
+  font-size: 22px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+};
+
+.genre-subheader {
+  margin: 0px 0px 20px 0px;
+  font-size: 14px;
+  color: gray;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.track-obj {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 25px 0px 0px;
+};
+
+.play-btn .track-play-btn {
+  display: none;
+  position: absolute;
+  bottom: 45%;
+  left: 35%;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  background-color: rgb(192, 20, 255);
+  padding: 15px 15px 15px 20px;
+  border-radius: 50%;
+}
+
+.play-btn .track-pause-btn {
+  display: none;
+  position: absolute;
+  bottom: 45%;
+  left: 35%;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  background-color: rgb(192, 20, 255);
+  padding: 15px 17px 15px 17px;
+  border-radius: 50%;
+}
+
+.discover-track-obj:hover > .play-btn .track-play-btn, .discover-track-obj:hover > .play-btn .track-pause-btn {
+  display: inline-block;
+}
+
+.cover-img {
+  width: 170px;
+  height: 170px;
+  border: 1px solid rgb(219, 219, 219);
+};
+
+.track-title {
+  text-decoration: none;
+  margin: 5px 0px 3px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+};
+
+.track-uploader {
+  text-decoration: none;
+  font-size: 12px;
+  color: gray;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.track-title:visited, .track-uploader:visited, .track-title:link, .track-uploader:link {
+  text-decoration: none;
+  color: rgb(32, 32, 32);
+};
+
+.discover-uploaders-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 38px 38px 0px 0px;
+};
+
+.discover-uploaders-list-header {
+  font-size: 14px;
+  color: gray;
+  padding: 0px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.discover-uploaders-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
+
+.discover-uploaders-obj {
+  display: flex;
+  margin: 0px 0px 15px 0px;
+}
+
+.discover-uploaders-pic {
+  border-radius: 100%;
+  margin: 0px 15px 0px 0px;
+  width: 55px;
+  height: 55px;
+}
+
+.discover-uploaders-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.discover-uploader-username {
+  margin: 0px 0px 5px 0px;
+  font-size: 13px;
+}
+
+.discover-numtracks-icon {
+  font-size: 10px;
+}
+
+.num-tracks {
+  display: flex;
+  font-size: 12px;
+  color: gray;
+}
+
+.discover-link {
+  text-decoration: none;
+}
+
+.discover-link:visited {
+  color: black;
+}

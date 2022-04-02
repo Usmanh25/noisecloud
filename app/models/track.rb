@@ -1,5 +1,6 @@
 class Track < ApplicationRecord
     validates :title, :uploader_id, :genre, presence: :true
+    # validate :audio_validation
 
     belongs_to :uploader,
         primary_key: :id,
@@ -14,6 +15,12 @@ class Track < ApplicationRecord
     
     has_one_attached :image
     has_one_attached :audio
+
+    # def audio_validation
+    #     unless self.audio.attached?
+    #         errors[:audio] << " is required*"
+    #     end
+    # end
 
 end
 

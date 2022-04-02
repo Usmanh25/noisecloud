@@ -6,7 +6,7 @@ import SplashContainer from './splash/splash_container'
 import DiscoverContainer from './discover/discover_container'
 import UploadContainer from './upload/upload_container'
 import Modal from './modal/modal'
-
+import TrackPlaybarContainer from './track_playbar/track_playbar_container'
 const App = () => (
   <div>
   <Modal/>
@@ -14,7 +14,7 @@ const App = () => (
 
   <Switch>
       <AuthRoute exact path="/" component={SplashContainer}/>
-      {/* <AuthRoute exact path="/" component={TrackPlaybarContainer}/> */}
+      <AuthRoute exact path="/" component={TrackPlaybarContainer}/>
       <ProtectedRoute path="/discover" component={DiscoverContainer}/>
       <ProtectedRoute path="/upload" component={UploadContainer}/>
   </Switch> 

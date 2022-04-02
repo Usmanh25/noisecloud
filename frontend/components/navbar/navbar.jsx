@@ -14,6 +14,7 @@ class NavBar extends React.Component {
               <div className="navbar">
                 {/* <div className="holder"></div> */}
                 <div className="nav-holder">
+                  <div className="firstbar"></div>
                   <Link className="logo" to="/discover">
                     ☁️
                   </Link>
@@ -31,7 +32,7 @@ class NavBar extends React.Component {
                     Upload
                   </Link>
 
-                  <Link className="profile-header" to="/user/userId">
+                  <Link className="profile-header" to={`/users/${currentUser.id}`}>
                     { currentUser.email }
                   </Link>
 

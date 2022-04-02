@@ -1,7 +1,8 @@
 import { fetchTracks } from '../../actions/track_actions'
 import {connect} from 'react-redux'
+import { logout } from "../../actions/session_actions"
 import Discover from './discover'
-import { refreshTrack } from '../../actions/track_playbar_actions'
+import { receivePlayTrack } from '../../actions/track_playbar_actions'
 
 
 const mSTP = state => {
@@ -19,7 +20,8 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return {
         fetchTracks: () => dispatch(fetchTracks()),
-        refreshTrack: (track) => dispatch(refreshTrack(track)),
+        // refreshTrack: (track) => dispatch(refreshTrack(track)),
+        receivePlayTrack: track => dispatch(receivePlayTrack(track))
     }
 }
 
