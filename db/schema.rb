@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_25_180103) do
+ActiveRecord::Schema.define(version: 2022_04_09_093028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,8 +37,13 @@ ActiveRecord::Schema.define(version: 2022_03_25_180103) do
   end
 
   create_table "comments", force: :cascade do |t|
+    t.string "body", null: false
+    t.integer "commenter_id", null: false
+    t.integer "track_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["commenter_id"], name: "index_comments_on_commenter_id"
+    t.index ["track_id"], name: "index_comments_on_track_id"
   end
 
   create_table "tracks", force: :cascade do |t|
@@ -47,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_03_25_180103) do
     t.string "genre", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "artist"
     t.index ["title"], name: "index_tracks_on_title"
     t.index ["uploader_id"], name: "index_tracks_on_uploader_id"
   end

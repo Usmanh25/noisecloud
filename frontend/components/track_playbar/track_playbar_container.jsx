@@ -3,7 +3,11 @@ import TrackPlaybar from "./track_playbar";
 import { receivePlayTrack, removePlayTrack, playTrack, pauseTrack } from "../../actions/track_playbar_actions";
 
 const mSTP = state => ({
-    track: state.ui.trackPlaybar.currentTrack
+    currentUser: state.entities.users[state.session.id],
+    currentTrack: state.ui.trackPlaybar.currentTrack,
+    isPlaying: state.ui.trackPlaybar.isPlaying,
+    
+    users: state.entities.users
 });
 
 const mDTP = dispatch => ({

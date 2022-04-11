@@ -7,12 +7,15 @@ class NavBar extends React.Component {
         super(props)
     }
 
+    // displayName() {
+    //   console.log(currentUser.email.slice(0, currentUser.indexOf('@')))
+    // }
+
     render() {
         const {logout, currentUser} = this.props
         return (
             <div>
               <div className="navbar">
-                {/* <div className="holder"></div> */}
                 <div className="nav-holder">
                   <div className="firstbar"></div>
                   <Link className="logo" to="/discover">
@@ -21,22 +24,24 @@ class NavBar extends React.Component {
                   <Link className="header-nav" to="/discover">
                     Home
                   </Link>
-                  <Link className="header-nav" to="/discover">
-                    Stream
-                  </Link>
-                  <button className="header-nav">Library</button>
+                  <a className="header-nav" href="https://github.com/usmanh25">
+                    Github
+                  </a>
+                  <a className="header-nav" href="https://www.linkedin.com/in/usman-hameed-5486b11b0/">
+                    LinkedIn
+                  </a>
                   <div className="discover-search">
                     <input type="text" placeholder="Search" />
                   </div>
-                  <Link className="upload-header" to="/upload">
+                  <Link className="header-nav" to="/upload">
                     Upload
                   </Link>
 
-                  <Link className="profile-header" to={`/users/${currentUser.id}`}>
-                    { currentUser.email }
+                  <Link className="header-nav" to={`/users/${currentUser.id}`}>
+                    { currentUser.email.slice(0, currentUser.email.indexOf('@')) }
                   </Link>
 
-                  <Link className="logout-header" to="/">
+                  <Link className="header-nav" to="/">
                       <div onClick={logout}>Logout</div>
                   </Link>
 

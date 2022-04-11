@@ -1,3 +1,10 @@
+export const fetchTrack = trackId => (
+    $.ajax({
+        mthod: "GET",
+        url: `/api/tracks/${trackId}`
+    })
+)
+
 export const fetchTracks = () => (
     $.ajax({
         method: "GET",
@@ -5,12 +12,12 @@ export const fetchTracks = () => (
     })
 )
 
-export const fetchTrack = trackId => (
+export const fetchUserTracks = userId => (
     $.ajax({
-        mthod: "GET",
-        url: `/api/tracks/${trackId}`
+        method: 'GET',
+        url: `/api/users/${userId}/tracks`
     })
-)
+);
 
 export const createTrack = track => (
     $.ajax({

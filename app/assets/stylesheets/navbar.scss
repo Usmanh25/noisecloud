@@ -1,17 +1,7 @@
-/* NAVBAR css */
-
 .navbar {
     margin-left: -20px;
     margin-top: -8px
 }
-
-.firstbar {
-    width: 150px;
-    height: 46px;
-    display: flex;
-    background-color: #333;
-}
-
 
 .nav-holder {
     width: 100vw;
@@ -20,12 +10,11 @@
     background-color: #333;
 }
 
-.navbar button:hover {
-    color: #fff;
-}
-
-.navbar div:hover {
-    color: #fff;
+.firstbar {
+    width: 150px;
+    height: 46px;
+    display: flex;
+    background-color: #333;
 }
 
 .logo {
@@ -83,44 +72,4 @@
     text-rendering: auto;
     text-align: start;
     font: 400 13.3333px Arial;
-}
-
-
-.upload-header {
-    text-decoration: none;
-    cursor: pointer;
-    display: block;
-    padding: 14px 10px 12px 13px;
-    height: 20px;
-    background-color: #333;
-    color: #ccc;
-    border: none;
-    width: 64.08px;
-    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
-}
-
-.profile-header {
-    text-decoration: none;
-    cursor: pointer;
-    display: block;
-    padding: 14px 10px 12px 13px;
-    height: 20px;
-    background-color: #333;
-    color: #ccc;
-    border: none;
-    width: 64.08px;
-    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
-}
-
-.logout-header {
-    text-decoration: none;
-    cursor: pointer;
-    display: block;
-    padding: 14px 10px 12px 13px;
-    height: 20px;
-    background-color: #333;
-    color: #ccc;
-    border: none;
-    width: 64px;
-    font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
 }

@@ -1,3 +1,115 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment-form-container {
+    display: flex;
+    margin: 20px 20px 20px 20px;
+}
+
+.comment-form-profile-pic {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #333;
+    border-radius: 100%;
+    background-image: url("https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg");
+}
+
+.comment-form {
+    margin-left: 20px;
+    width: 89%;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 3px;
+    background-color: rgb(245, 245, 245);
+}
+
+.comment-form input {
+    margin: 10px 10px 10px 10px;
+    width: 96%;
+    height: 60px;
+    color: black;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 3px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 16px;
+}
+
+.comment-form input:focus {
+    outline: none;
+}
+
+.comments-index-container {
+    width: 800px;
+}
+
+.list {
+    list-style: none;
+}
+
+.comment-obj-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 20px 0px;
+}
+
+.comment-obj {
+    display: flex;
+}
+
+.comment-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 5px;
+}
+
+.comment-profile-pic {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #333;
+    border-radius: 100%;
+    background-image: url("https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg");
+}
+
+.comment-commenter-username {
+    font-size: 13px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    margin: 0px 0px 5px 0px;
+}
+
+.comment-commenter-username:visited, .comment-commenter-username:link {
+    text-decoration: none;
+    color: gray;
+}
+
+.comment-body-text {
+    font-size: 14px;
+    margin-top: 8px;
+    margin-left: 25px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+
+}
+
+.comment-obj-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.delete-comment-btn {
+    display: none;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+}
+
+.comment-obj-container:hover .delete-comment-btn {
+    display: inline-block;
+}
+
+.delete-comment-btn:hover {
+    cursor: pointer;
+}

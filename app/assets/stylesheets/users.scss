@@ -1,3 +1,270 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the Users controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.track-delete {
+    color: red;
+    visibility: hidden;
+    padding-right: 10px;
+    padding-top: 25px;
+}
+
+.track-list-item {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding-top: 15px;
+    padding-left: 20px;
+    position: relative;
+    width: 95%;
+    justify-content: space-between; 
+}
+
+.track-list-item a {
+    margin-top: 45px;
+    margin-left: 20px;
+    height: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+.track-list-item:hover {
+    background-color: lightgray;
+    border-radius: 8px;
+
+    .track-info {
+        background-color: lightgray;
+    }
+}
+
+.track-list-item:hover .delete-song {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.track-list-item > .play-button {
+    display: none;
+}
+
+.track-list-item:hover > .play-button {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    cursor: pointer;
+}
+
+.track-list-item-container {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.track-image {
+    width: 120px;
+    height: 120px;
+}
+
+.track-info {
+    display: flex;
+    align-items: left;
+    padding-left: 15px;
+    justify-content: space-evenly;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 16px;
+}
+
+.track-list-title {
+    padding-left: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.track-artist {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    color: black;
+    margin-left: 10px;
+}
+
+.play-button {
+    width: 50px;
+    height: 50px;
+}
+
+.play-button > .play-container {
+    height: 50px;
+    width: 50px;
+    background-color: #ff5502;
+}
+
+.first-upload {
+    border: none;
+    border-radius: 8px;
+    background-color: #ff5502;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    width: 380px;
+}
+
+.user-show-page-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-header {
+    width: 1227px;
+    display: flex;
+    height: 435px;
+    background: linear-gradient(to right,#ff9c5a,#ff5502);
+}
+
+.user-header-left-container {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    width: 50%;
+}
+
+.user-header-left {
+    display: flex;
+    width: 95%;
+    margin-bottom: 150px;
+    margin-left: 20px;
+}
+
+.user-profile-pic {
+    height: 245px;
+    width: 250px;
+    border-radius: 50%;
+    margin-top: 40px;
+    background-image: url("https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg");
+}
+
+.username-container {
+    width: 50%;
+    margin-top: 40px;    
+}
+
+.username {
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 40px;
+    font-size: 24px;
+    background-color: #333;
+    color: white;
+    margin-left: 25px;
+}
+
+.user-bottom {
+    background-color: rgb(235, 235, 235);
+    width: 1227px;
+    padding-bottom: 50px;
+}
+
+.uploaded-tracks-container {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.uploaded-tracks {
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    margin-left: 70px;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+
+.user-tracks{
+    display: flex;
+    padding-top: 15px;
+}
+
+.user-tracks-list {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid lightgray;
+}
+
+.user-show-bottom-right {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-uploaded-tracks {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-bottom: 25px;
+}
+
+.tracks {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.number-tracks {
+    padding-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+.meet-the-creator-user {
+    width: 90%;
+    border-bottom: 1px solid gray;
+    color: #999;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-buttons-user {
+    display: flex;
+    margin-top: 20px;
+}
+
+.github {
+    text-decoration: none;
+    background-color: black;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.linkedin {
+    text-decoration: none;
+    margin-left: 10px;
+    background-color: black;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 0px 5px 0px 0px;
+    padding: 20px;
+    color: white;
+}
+
+.fine-print2 {
+    margin-bottom: 40px;
+}

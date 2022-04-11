@@ -1,5 +1,5 @@
 class Track < ApplicationRecord
-    validates :title, :uploader_id, :genre, presence: :true
+    validates :title, :uploader_id, :artist, :genre, presence: :true
     # validate :audio_validation
 
     belongs_to :uploader,

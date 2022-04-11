@@ -28,13 +28,19 @@ export const removeTrackErrors = () => ({
 
 export const fetchTracks = () => dispatch => {
     return TrackApiUtil.fetchTracks()
-        .then(tracks => dispatch(receiveTracks(tracks)))
+    .then(tracks => dispatch(receiveTracks(tracks)))
 }
 
 export const fetchTrack = trackId => dispatch => {
     return TrackApiUtil.fetchTrack(trackId)
         .then(track => dispatch(receiveTrack(track)))
 }
+
+export const fetchUserTracks = userId => dispatch => {
+    return TrackApiUtil.fetchUserTracks(userId)
+        .then(tracks => dispatch(receiveTracks(tracks)))
+};
+
 
 export const createTrack = track => dispatch => {
     return TrackApiUtil.createTrack(track).then(

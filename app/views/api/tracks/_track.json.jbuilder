@@ -1,19 +1,12 @@
-json.extract! track, :id, :title, :uploader_id, :genre
+json.extract! track, :id, :title, :artist, :uploader_id, :genre
 
-json.email track.uploader.email
-
-if track.image.attached?
-  json.imageUrl url_for(track.image)
-else
-  json.imageUrl "https://img.freepik.com/free-icon/black-music-icon_318-9277.jpg?size=338&ext=jpg"
+json.comments do
+    track.comments.each do |comment|
+        json.set! comment.id do
+            json.extract! comment, :id, :body, :commenter_id, :created_at
+        end
+    end
 end
 
-if track.audio.attached?
-  json.audioUrl url_for(track.audio)
-end
-
-
-
-# json.extract! song, :id, :title, :description, :genre, :artist_id 
-# json.photoUrl url_for(song.photo) if song.photo.attached?
-# json.songUrl url_for(song.song) if song.song.attached?
+json.imageUrl url_for(track.image) if track.image.attached?
+json.audioUrl url_for(track.audio) if track.audio.attached?

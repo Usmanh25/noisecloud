@@ -1,5 +1,4 @@
 import React from 'react'
-import GreetingContainer from '../greeting/greeting_container'
 
 class Splash extends React.Component{
     constructor(props) {
@@ -7,27 +6,38 @@ class Splash extends React.Component{
     }
 
     componentDidMount() {
-        // this.props.fetchTracks()
+        this.props.fetchTracks()
     }
 
     render() {
 
+        if (!this.props) { return null }
+
+        const { fetchTracks, tracks, openModal } = this.props;
+
+        const sampleTracks = [];
+        const givenTracks = Object.values(tracks)
+        for (let i = 0; i < 12; i++) {
+            sampleTracks.push(givenTracks[i])
+        }
+
         return ( 
             <div className="splash-container">
 
-                <div className="slideshow-container">
 
+
+                <div className="slideshow-container">
                     <span>
                         <h1 className="noisecloud-logo">
                             ☁️     
-                            <span className='xc'>
+                            <span className='loginsignupspan'>
                                 <button className="login-button" onClick={() => this.props.openModal("login")}>Sign in</button>
                                 <button className="signup-button" onClick={() => this.props.openModal("signup")}>Create account</button>
                             </span>
                         </h1>
                     </span>
                     <br />
-                    <h2 className='txt'>What's next in music is first on NoiseCloud</h2>
+                    <h2 className='ptxt0'>What's next in music is first on NoiseCloud</h2>
                     <br />
                     <p className='ptxt1'>
                         Upload your first track and begin your journey. NoiseCloud gives
@@ -42,46 +52,38 @@ class Splash extends React.Component{
                     </p>
                     <br />
                     <button className="start-uploading-today-button" onClick={() => this.props.openModal("signup")}>Start Uploading Today</button>
-
                 </div>
 
-                    <br />
+
+
+                <div className="trending-tracks-title">Hear what's trending for free in the NoiseCloud community</div>
 
 
 
-                    {/* <span>
-                        <p className='ptag'>What's next in music is first on NoiseCloud</p>
-                        <br />
-                        <p className='ptag2'>UNDERTEST</p>
-                        <button className="upload-your-own-button" onClick={() => this.props.openModal("signup")}>Start Uploading Today</button>
-                    </span> */}
-
-{/* 
-
-                    <div className = 'header-middle-div'>
-                        <h1>What's next in music is first on NoiseCloud</h1>
-                        <br />
-                        <h2>Upload your first track and begin your journey. SoundCloud gives 
-                            you space to create, find your fans, and connect 
-                            with other artists</h2>
-                        <button className="upload-your-own-button" onClick={() => this.props.openModal("signup")}>Start Uploading Today</button>
-                    </div>
-                    <br /> */}
-
-                    
-
-                <div className="trending-music-div">
-                    <div className="searchbar-container">
+                <div className="searchbar-container">
                         <input className="searchbar" placeholder="Search for artists, bands, tracks, podcasts" type="text" name="" id=""/>
                         <p className="or">or</p>
                         <button className="upload-your-own-button" onClick={() => this.props.openModal("signup")}>Upload your own</button>
-                    </div>
-                    <div className="trending-tracks-title">Hear what's trending for free in the NoiseCloud community</div>
-                    <div className="splash-songs">
-                        {/* {newSongs} */}
-                    </div>
-                    <button className="explore-trending-playlists-button" value="Explore trending playlists" onClick={() => this.props.openModal("signup")}>Explore trending playlists</button>
                 </div>
+
+
+
+                <div className="trending-music-div">
+                    <ul className="trending-music-list">
+                        {
+                            sampleTracks.map(track => (
+                                track ? 
+                                (<span className="trending-music-obj" key={track.id}>
+                                    <li>
+                                        <img className="track-img" src={track.imageUrl} />
+                                    </li>
+                                </span>) : null
+                            ))
+                        }
+                    </ul>
+                </div>
+
+                <button className="explore-trending-playlists-button" value="Explore trending playlists" onClick={() => this.props.openModal("signup")}>Explore trending playlists</button>
 
 
                 <div className="mobile-banner">
@@ -94,11 +96,13 @@ class Splash extends React.Component{
                 </div>
                 
 
+
                 <div className="calling-all-creators">
                     <h2 className="cac-header">Calling all Creators</h2>
                     <p className="cac-text">Get on NoiseCloud to connect with fans, share your sounds, and grow your audience. What are you waiting for?</p>
                     <button className="cac-button" onClick={() => this.props.openModal("signup")}>Find out more</button>
                 </div>
+
 
 
                 <div className="bottom-container">
@@ -112,15 +116,66 @@ class Splash extends React.Component{
                 </div>
 
 
+
                 <div className="fine-print">
                     <hr className="gray-line"></hr>
                     <p>Directory - About us - Creator Resources - Blog - Jobs - Developers - Help - Legal - Privacy - Cookie Policy - Cookie Manager - Imprint - Charts </p>
                     <p>Language:English (US)</p>
                 </div>
-            </div>
 
-         );
+
+
+            </div>
+        );
     }
 }
  
 export default Splash;
+
+
+// import { logout } from "../../actions/session_actions";
+// import Greeting from "./greeting"
+// import {connect} from "react-redux";
+// import {openModal} from "../../actions/modal_actions"
+
+// const mSTP = ({ session }) => ({
+//     currentUser: session.currentUser
+// });
+
+// const mDTP = dispatch => ({
+//     logout: () => dispatch(logout()),
+//     openModal: modal => dispatch(openModal(modal))
+// });
+
+// export default connect(mSTP,mDTP)(Greeting)
+
+
+// import React from 'react';
+
+// class Greeting extends React.Component {
+//     constructor(props){
+//         super(props)
+//     }
+
+//     render() { 
+//         let { currentUser, logout,} = this.props
+//         let greetingUser = () => (
+//             <div className="user-profile-header">
+//                 <h1>{currentUser.username}</h1>
+//                 <button onClick={() => logout(currentUser.id)}>Log Out</button>
+//             </div>
+            
+
+
+//         )
+//         let sessionLinks = () => (
+//             <div>
+//                 <button className="login-button" onClick={() => this.props.openModal("login")}>Sign in</button>
+//                 <button className="signup-button" onClick={() => this.props.openModal("signup")}>Create account</button>
+//             </div>
+//         )
+//         return currentUser ? greetingUser() : sessionLinks()
+//     }
+// }
+ 
+// export default Greeting; 

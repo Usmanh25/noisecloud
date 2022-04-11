@@ -25,6 +25,11 @@ const removeComment = commentId => {
     };
 };
 
+export const fetchComments = () => dispatch => {
+    return CommentApiUtil.fetchComments()
+    .then(comments => dispatch(receiveComments(comments)))
+}
+
 export const createComment = comment => dispatch => {
     return CommentApiUtil.createComment(comment)
         .then(comment => dispatch(receiveComment(comment)))
