@@ -11,7 +11,6 @@ class Upload extends React.Component {
         this.state = {
             title: '',
             uploader_id: this.props.currentUser.id,
-            // uploader_id: this.props.currentUserId,
             genre: '',
             artist: '',
             audioFile: null,
@@ -114,14 +113,14 @@ class Upload extends React.Component {
                             changeUpload={this.changeUpload}
                             page={this.state.page}
                         />
-                        {/* <FileDetails 
+                        <FileDetails 
                             changeUpload={this.changeUpload}
                             state={this.state}
                             update={this.update}
                             handleFile={this.handleFile}
                             handleSubmit={this.handleSubmit}
                         />
-                        <SuccessFile 
+                        {/* <SuccessFile 
                             state={this.state}
                             currentUser={this.props.currentUser}
                         /> */}

@@ -18,7 +18,7 @@ class UploadFile extends React.Component {
                         id="file"
                         className="inputfile"
                         accept=".mp3,audio/*"
-                        onChange={this.props.changeUpload}
+                        onChange={this.props.page}
                     />
                     <label htmlFor="file">or choose files to upload</label>
                 </div>
