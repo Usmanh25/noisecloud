@@ -7,10 +7,6 @@ class NavBar extends React.Component {
         super(props)
     }
 
-    // displayName() {
-    //   console.log(currentUser.email.slice(0, currentUser.indexOf('@')))
-    // }
-
     render() {
         const {logout, currentUser} = this.props
         return (
