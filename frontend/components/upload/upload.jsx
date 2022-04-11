@@ -109,10 +109,10 @@ class Upload extends React.Component {
                     </div> */}
                     
                     <div>
-                        <UploadFile 
+                        {/* <UploadFile 
                             changeUpload={this.changeUpload}
                             page={this.state.page}
-                        />
+                        /> */}
                         <FileDetails 
                             changeUpload={this.changeUpload}
                             state={this.state}

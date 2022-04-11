@@ -89,7 +89,7 @@
 
 .inputfile + label {
     width: 277px;
-    margin-top: 3%;
+    // margin-top: ;
     color: #fff;
     display: inline-block;
     background-color: #ff5500;
@@ -209,7 +209,10 @@
 
 
 
+
 .song-details {
+    margin-right: 25px;
+    margin-top: 20px;
     width: 471px;
     height: 320px;
     background-color: #fff;
@@ -261,13 +264,14 @@
 /* uploader footer */
 
 .upload-footer {
-    width: 100%;
+    width: 450px;
     height: 26px;
     padding: 35px 25px 20px 25px;
     border-top: 1px solid #ccc;
     background-color: #fff;
     display: flex;
     justify-content: left;
+    margin-left: 320px;
 }
 
 .upload-footer p {
