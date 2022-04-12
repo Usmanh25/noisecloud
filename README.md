@@ -18,7 +18,7 @@ NoiseCloud is a fullstack clone of the popular music-streaming platform SoundClo
 # Features
 ## Continuous Audio Play
 
-Logged in users can chose to have a single track looped continuously, as well as view the length and duration of any track while listening. They can navigate throughout the site without the current music track being interrupted. By rendering the TrackPlaybar component in a protected route and by persisting the current track playing in a state nested under the ui state, this is acomplished
+Logged in users can chose to have a single track looped continuously, as well as view the length and duration of any track while listening. They can navigate throughout the site without the current music track being interrupted. By rendering the TrackPlaybar component in a protected route and by persisting the current track playing in a state nested under the ui state, this is
 
 ```javascript
 //frontend/components/app.jsx
@@ -39,6 +39,7 @@ const mDTP = dispatch => ({
     pauseTrack: () => dispatch(pauseTrack())
 });
 
+```
 ## Uploading Tracks
 
 Users can upload their own tracks to the site. 
