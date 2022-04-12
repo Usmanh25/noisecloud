@@ -1,6 +1,6 @@
 import React from 'react'
-import FileDetails from './file_details';
-import SuccessFile from './success_file';
+import UploadDetails from './upload_details';
+import UploadSuccess from './upload_success';
 import UploadFile from "./upload_file";
 
 class Upload extends React.Component {
@@ -113,7 +113,7 @@ class Upload extends React.Component {
                             changeUpload={this.changeUpload}
                             page={this.state.page}
                         /> */}
-                        <FileDetails 
+                        <UploadDetails 
                             changeUpload={this.changeUpload}
                             state={this.state}
                             update={this.update}

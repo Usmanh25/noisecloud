@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FileDetails extends React.Component {
+class UploadDetails extends React.Component {
     // state = {  }
     render() { 
         const uploadButton = !this.props.state.imageUrl ? 
@@ -80,4 +80,4 @@ class FileDetails extends React.Component {
     }
 };
  
-export default FileDetails;
+export default UploadDetails;

@@ -6,7 +6,6 @@ const mSTP = state => ({
     currentUser: state.entities.users[state.session.id],
     currentTrack: state.ui.trackPlaybar.currentTrack,
     isPlaying: state.ui.trackPlaybar.isPlaying,
-    
     users: state.entities.users
 });
 
