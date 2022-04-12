@@ -26,7 +26,7 @@ class UploadDetails extends React.Component {
                     onChange={this.props.handleFile}
                 >
                 </input>
-                <label htmlFor="upload-image">Update image</label>
+                <label className='upload-image-button' htmlFor="upload-image">Update image</label>
             </div>
 
         const preview = this.props.state.imageUrl ? <img src={this.props.state.imageUrl} className="song-artwork-upload2"></img> : <span className="song-artwork-upload"></span>; 

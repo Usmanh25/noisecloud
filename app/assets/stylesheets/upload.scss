@@ -165,7 +165,7 @@
 .song-artwork-upload {
     width: 260px;
     height: 260px;
-    background-image: linear-gradient(135deg,#846170,#70929c);
+    background-image: url("https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg");
     float: left;
     margin: 2.5% 0px 2.5% 4.5%;
 }
@@ -180,6 +180,8 @@
 
 
 .upload-button-holder {
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    border-radius: 10px;
     margin-bottom: 170px; 
     margin-left: 30%;
     height: 30px;
@@ -199,6 +201,7 @@
     border: 1px solid #e5e5e5;
     background-color: #ff5500;
     font-size: 14px;
+    border-radius: 6px;
     line-height: 20px;
     white-space: nowrap;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
@@ -221,8 +224,10 @@
 }
 
 .song-details p {
-    font-size: 12px;
+    font-size: 14px;
     margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
     color: #333;
 }
 
