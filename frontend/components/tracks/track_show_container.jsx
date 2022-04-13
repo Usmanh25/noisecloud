@@ -10,10 +10,8 @@ const mSTP = (state, ownProps) => {
         track: state.entities.tracks[ownProps.match.params.trackId],
         tracks: Object.values(state.entities.tracks),
         users: Object.values(state.entities.users),
-        // commments: Object.values(state.entities.trackscomments),
         trackId: ownProps.match.params.trackId,
         currentTrack: state.ui.trackPlaybar.currentTrack
-        // currentTrack: state.entities.tracks[state.ui.trackPlaybar.id],
     }
 }
 

@@ -25,24 +25,6 @@ class TrackShow extends React.Component {
     render() {
         if (!this.props.track) return null;
 
-
-        // const editButton = this.props.currentUserId === this.props.track.uploader_id ? (
-        //     <button
-        //         className="modify-track-btn"
-        //         // onClick={() => this.props.openModal('Update Track')}
-        //         >
-        //         <FontAwesomeIcon icon={faPencilAlt} /> Edit Track
-        //     </button>
-        // ) : null
-        
-        // const deleteButton = this.props.currentUserId === this.props.track.uploader_id ? (
-            //     <button
-            //         className="modify-track-btn"
-            //         onClick={() => this.props.deleteTrack(this.props.track.id).then(() => this.props.history.push('/discover'))}>
-            //         <FontAwesomeIcon icon={faTrashAlt} /> Delete Track
-            //     </button>
-            // ) : null
-
         const genreRecommended = this.props.tracks.filter(track => track.genre === this.props.track.genre && track.id !== this.props.track.id);
         const threeItems = genreRecommended.slice(0,3);
         const renderItems = threeItems.map( (track, idx) => {
@@ -98,17 +80,7 @@ class TrackShow extends React.Component {
                         />
                     </div>
 
-
-                    {/* <div className="modify-track-btns">
-                        {editButton}
-                        {deleteButton}
-                    </div> */}
-
                     <div className="under-comment-form">
-                        {/* <div className="uploader-details">
-                            <img className="uploader-details-pic" src={this.props.track.imageUrl} />
-                            <div className="uploader-details-label">UPLOADERUSERNAME</div>
-                        </div> */}
 
                         <CommentItemContainer
                             currentUser={this.props.currentUser}

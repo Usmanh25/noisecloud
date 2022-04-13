@@ -58,7 +58,6 @@ class Discover extends React.Component {
                                                 </div>
                                                 <Link to={`/tracks/${track.id}`} className="track-title">{track.title}</Link>
                                                 <h5 className='track-artist-under-title'>{track.artist}</h5>
-                                                {/* <Link to={`/users/${track.uploader_id}`} className="discover-track-uploader">Uploaded by</Link> */}
                                             </li>
                                         </div>
                                     ))
@@ -83,7 +82,6 @@ class Discover extends React.Component {
                                                 </Link>
                                                 <Link to={`/tracks/${track.id}`} className="track-title">{track.title}</Link>
                                                 <h5 className='track-artist-under-title'>{track.artist}</h5>
-                                                {/* <Link to={`/users/${track.uploader_id}`} className="discover-track-uploader">Uploaded by</Link> */}
                                             </li>
                                         </div>
                                     ))
@@ -108,7 +106,6 @@ class Discover extends React.Component {
                                                 </Link>
                                                 <Link to={`/tracks/${track.id}`} className="track-title">{track.title}</Link>
                                                 <h5 className='track-artist-under-title'>{track.artist}</h5>
-                                                {/* <Link to={`/users/${track.uploader_id}`} className="discover-track-uploader">Uploaded by</Link> */}
                                             </li>
                                         </div>
                                     ))
@@ -133,7 +130,6 @@ class Discover extends React.Component {
                                                 </Link>
                                                 <Link to={`/tracks/${track.id}`} className="track-title">{track.title}</Link>
                                                 <h5 className='track-artist-under-title'>{track.artist}</h5>
-                                                {/* <Link to={`/users/${track.uploader_id}`} className="discover-track-uploader">Uploaded by</Link> */}
                                             </li>
                                         </div>
                                     ))
@@ -158,7 +154,6 @@ class Discover extends React.Component {
                                                 </Link>
                                                 <Link to={`/tracks/${track.id}`} className="track-title">{track.title}</Link>
                                                 <h5 className='track-artist-under-title'>{track.artist}</h5>
-                                                {/* <Link to={`/users/${track.uploader_id}`} className="discover-track-uploader">Uploaded by</Link> */}
                                             </li>
                                         </div>
                                     ))

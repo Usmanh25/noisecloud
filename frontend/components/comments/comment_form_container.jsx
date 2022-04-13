@@ -4,7 +4,6 @@ import CommentForm from './comment_form';
 
 const mSTP = (state, ownProps) => ({
     currentUser: state.entities.users[state.session.id],
-    // comments: state.entities.comments,
     comment: {
         body: '',
         track_id: ownProps.commentTrackId

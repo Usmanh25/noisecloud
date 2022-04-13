@@ -7,9 +7,6 @@ class CommentItem extends React.Component {
 
     render () {
 
-        
-        
-        
         if (!this.props.comments) { return null }
         
         const { comments, currentUser, deleteComment } = this.props;
@@ -25,7 +22,6 @@ class CommentItem extends React.Component {
                                         <Link to={`/users/${comment.commenter_id}`}><img className="comment-profile-pic" alt=''/></Link>
                                         <div className="comment-body">
                                             <Link className="comment-commenter-username" to={`/users/${comment.commenter_id}`}>{this.props.users[comment.commenter_id]}</Link>
-                                            {/* <Link className="comment-commenter-username" to={`/users/${comment.commenter_id}`}>{users[comment.commenter_id].email.slice(0, users[comment.commenter_id].email.indexOf('@'))}</Link> */}
                                             <div className="comment-body-text">{comment.body}</div>
                                         </div>
                                     </div>
