@@ -20,7 +20,7 @@ class NavBar extends React.Component {
                   <Link className="header-nav" to="/discover">
                     Home
                   </Link>
-                  <a className="header-nav" href="https://github.com/usmanh25">
+                  <a className="header-nav" target='_blank' href="https://github.com/usmanh25">
                     Github
                   </a>
                   <a className="header-nav" href="https://www.linkedin.com/in/usman-hameed-5486b11b0/">
