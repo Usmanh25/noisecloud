@@ -98,7 +98,9 @@
 }
 
 .trending-tracks-title {
-    margin-left: 440px;
+    margin: auto;
+    display: flex;
+    text-align: center;
     font: 100 24px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
     width: 625px;
     margin-top: 20px;
@@ -165,7 +167,6 @@
 .trending-music-obj {
     display: flex;
     flex-direction: column;
-    // border: 1px solid gray;
     margin: 7px;
 };
 
@@ -179,7 +180,9 @@
     background-color: #ff5502;
     border-color: #ff5502;
     color: #fff;
-    margin-left: 540px;
+    margin: auto;
+    display: flex;
+    text-align: center;
     height: 50px;
     padding: 13px 15px 15px 15px;
     border-radius: 5px;

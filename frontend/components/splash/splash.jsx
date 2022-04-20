@@ -55,8 +55,9 @@ class Splash extends React.Component{
                 </div>
 
 
-
-                <div className="trending-tracks-title">Hear what's trending for free in the NoiseCloud community</div>
+                <div>
+                    <div className="trending-tracks-title">Hear what's trending for free in the NoiseCloud community</div>
+                </div>
 
 
 
@@ -83,8 +84,9 @@ class Splash extends React.Component{
                     </ul>
                 </div>
 
-                <button className="explore-trending-playlists-button" value="Explore trending playlists" onClick={() => this.props.openModal("signup")}>Explore trending playlists</button>
-
+                <div>
+                    <button className="explore-trending-playlists-button" onClick={() => this.props.openModal("signup")}>Explore trending playlists</button>  
+                </div>
 
                 <div className="mobile-banner">
                     <div className="mobile-picture"></div>
