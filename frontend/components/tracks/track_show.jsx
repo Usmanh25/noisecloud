@@ -11,18 +11,26 @@ class TrackShow extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            ...this.props.track
-        }
+        // this.state = {
+        //     ...this.props.track
+        // }
     }
-
+    
     componentDidMount() {
         this.props.fetchTrack(this.props.match.params.trackId)
         this.props.fetchTracks();
-        this.props.fetchComments(this.props.match.params.commentId)
+        // this.props.fetchComments(this.props.match.params.commentId)
         // this.props.fetchComments()
     };
 
+    componentDidUpdate() {
+        // this.props.fetchTrack(this.props.match.params.trackId)
+        // this.props.fetchTracks();
+        // this.props.fetchComments(this.props.match.params.commentId)
+        // this.props.fetchComments()
+    };
+    
+    
     render() {
         if (!this.props.track) return null;
 
@@ -76,13 +84,13 @@ class TrackShow extends React.Component {
                 <div className="track-show-comment-section">
                     <div>
                         <CommentFormContainer
-                            comments={this.props.comments}
                             commentTrackId={this.props.trackId}
                         />
                     </div>
                     <div className="under-comment-form">
                         <CommentItemContainer
                             currentUser={this.props.currentUser}
+                            track={this.props.track}
                         />
                     </div>
                 </div>
