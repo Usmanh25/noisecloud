@@ -11,7 +11,6 @@ class Api::SessionsController < ApplicationController
         else
             render json: ["Invalid email or password"], status: 401
         end
-
     end
 
     def destroy
