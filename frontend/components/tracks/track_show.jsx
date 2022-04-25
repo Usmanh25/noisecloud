@@ -80,13 +80,10 @@ class TrackShow extends React.Component {
                             commentTrackId={this.props.trackId}
                         />
                     </div>
-
                     <div className="under-comment-form">
-
                         <CommentItemContainer
                             currentUser={this.props.currentUser}
                         />
-
                     </div>
                 </div>
                 <div className = 'track-show-bottom-right'>
