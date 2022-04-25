@@ -18,8 +18,9 @@ class TrackShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchTrack(this.props.match.params.trackId)
-        this.props.fetchComments(this.props.match.params.commentId)
-        // this.props.fetchComments()
+        this.props.fetchTracks();
+        // this.props.fetchComments(this.props.match.params.commentId)
+        this.props.fetchComments()
     };
 
     render() {
