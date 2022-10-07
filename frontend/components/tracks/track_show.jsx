@@ -4,7 +4,7 @@ import CommentFormContainer from "../comments/comment_form_container";
 import CommentItemContainer from "../comments/comment_item_container";
 import PlayButtonContainer from "../play_button/play_button_container";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedinIn, faAngellist } from '@fortawesome/free-brands-svg-icons'
 
 
 class TrackShow extends React.Component {
@@ -113,6 +113,10 @@ class TrackShow extends React.Component {
 
                                     <a className="linkedin" href="https://www.linkedin.com/in/usman-hameed-5486b11b0/" target="_blank">
                                         <div><FontAwesomeIcon icon={faLinkedinIn} />&#160;&#160;LinkedIn</div>
+                                    </a>
+
+                                    <a className="angellist" href="https://angel.co/u/usman-hameed-2" target="_blank">
+                                        <div><FontAwesomeIcon icon={faAngellist} />&#160;&#160;AngelList</div>
                                     </a>
 
                                 </div>

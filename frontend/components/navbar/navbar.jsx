@@ -29,6 +29,9 @@ class NavBar extends React.Component {
                   <div className="discover-search">
                     <input type="text" placeholder="Search" />
                   </div>
+                  <a className="header-nav" target='_blank' href="https://angel.co/u/usman-hameed-2">
+                    AngelList
+                  </a>
                   <Link className="header-nav" to="/upload">
                     Upload
                   </Link>

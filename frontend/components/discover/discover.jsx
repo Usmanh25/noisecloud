@@ -2,7 +2,7 @@ import React from "react";
 import PlayButtonContainer from "../play_button/play_button_container";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedinIn, faAngellist } from '@fortawesome/free-brands-svg-icons'
 
 
 class Discover extends React.Component {
@@ -173,6 +173,9 @@ class Discover extends React.Component {
                                 </a>
                                 <a className="linkedin" href="https://www.linkedin.com/in/usman-hameed-5486b11b0/" target="_blank">
                                     <div><FontAwesomeIcon icon={faLinkedinIn} />&#160;&#160;LinkedIn</div>
+                                </a>
+                                <a className="angellist" href="https://angel.co/u/usman-hameed-2" target="_blank">
+                                    <div><FontAwesomeIcon icon={faAngellist} />&#160;&#160;AngelList</div>
                                 </a>
                             </div>
 
