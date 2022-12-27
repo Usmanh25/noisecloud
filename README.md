@@ -86,7 +86,7 @@ const mapDispatchToProps = dispatch => ({
 
 ## Uploading Tracks
 
-Users can upload tracks to NoiseCloud, provided a title, artist, and genre. Much like SoundCloud, if an image is not provided, their profile photo will be assigned to the track. The track will then be listed on that user's profile page.
+Users can upload tracks to NoiseCloud, provided a title, artist, and genre. Much like SoundCloud, if an image is not provided, their profile photo will be assigned to the track. The track will then be listed on the user's profile page.
 
 <img src="app/assets/images/UploadPage.png"></img>
 
