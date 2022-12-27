@@ -1,5 +1,5 @@
 {
-  "name": "NoiseCloud",
+  "name": "noisecloud",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.17.8",
