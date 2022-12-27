@@ -38,7 +38,7 @@ Upon successful login, users will be redirected to the discover page, where they
 
 ## Play Button
 
-Once at the discover page, a play button is rendered whenever the user hovers over a track's image. Once clicked, this button will initiate the music player. This play button component is seen throughout the site, and changes it's state depending on the track's play status. This is done by passing 2 props into the play button's container file: the track's information and a boolean to determine whether or not the track is currently playing.
+Once at the Discover page, a play button is rendered whenever the user hovers over a track's image. Once clicked, this button will initiate the music player. This play button component is seen throughout the site, and changes it's state depending on the track's play status. This is done by passing 2 props into the play button's container file: the track's information and a boolean to determine whether or not the track is currently playing.
 
 ```javascript
 // frontend/components/play_button/play_button_container.jsx
