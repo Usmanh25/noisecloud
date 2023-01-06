@@ -59,7 +59,6 @@ track29 = Track.create!(title: 'Out Of My Head', uploader_id: user5.id, artist: 
 track30 = Track.create!(title: 'Ill Take You High', uploader_id: user5.id, artist: 'Tiesto', genre: 'EDM')
 
 # AWS Track Seeds
-
 track1_image = open('https://noisecloud-seeds.s3.us-west-1.amazonaws.com/The_Weeknd.png')
 track1.image.attach(io: track1_image, filename: 'The_Weeknd.png')
 track1_audio = open('https://noisecloud-seeds.s3.us-west-1.amazonaws.com/The_Weeknd_Out_Of_Time.mp3')

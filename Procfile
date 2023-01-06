@@ -1,2 +1,1 @@
-web: bundle exec rails server
-release: rake db:migrate
+web: bundle exec rails s
