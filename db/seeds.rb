@@ -64,6 +64,7 @@ track1.image.attach(io: track1_image, filename: 'The_Weeknd.png')
 track1_audio = open('https://noisecloud-seeds.s3.us-west-1.amazonaws.com/The_Weeknd_Out_Of_Time.mp3')
 track1.audio.attach(io: track1_audio, filename: 'The_Weeknd_Out_Of_Time.mp3')
 
+
 track2_image = open('https://noisecloud-seeds.s3.us-west-1.amazonaws.com/SZA.png')
 track2.image.attach(io: track2_image, filename: 'SZA.png')
 track2_audio = open('https://noisecloud-seeds.s3.us-west-1.amazonaws.com/SZA_I_Hate_U.mp3')
