@@ -3,7 +3,7 @@ import {
     PAUSE_TRACK,
     RECEIVE_PLAY_TRACK,
     REMOVE_PLAY_TRACK
-} from '../src/actions/track_playbar_actions'
+} from '../actions/track_playbar_actions'
 
 const l = {
     currentTrack: null,

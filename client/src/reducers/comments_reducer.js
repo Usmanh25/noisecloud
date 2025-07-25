@@ -2,9 +2,9 @@ import {
   RECEIVE_COMMENTS,
   RECEIVE_COMMENT,
   REMOVE_COMMENT
-} from '../src/actions/comment_actions';
+} from '../actions/comment_actions';
 
-import { RECEIVE_TRACK } from '../src/actions/track_actions';
+import { RECEIVE_TRACK } from '../actions/track_actions';
 
 const commentsReducer = (state = {}, action) => {
     Object.freeze(state);

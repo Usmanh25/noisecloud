@@ -1,4 +1,4 @@
-import { RECEIVE_TRACK_ERRORS, REMOVE_TRACK_ERRORS } from '../src/actions/track_actions';
+import { RECEIVE_TRACK_ERRORS, REMOVE_TRACK_ERRORS } from '../actions/track_actions';
 
 const trackErrorsReducer = (state = [], action) => {
   Object.freeze(state);
