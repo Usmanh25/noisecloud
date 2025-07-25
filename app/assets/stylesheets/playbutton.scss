@@ -1,15 +1,17 @@
 .play-control {
-    color: white;
+    color: rgb(170, 168, 168);
     font-size: 24px;
+    display: flex;
 }
 
 .play-container {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ff5502;
+    background-color: #ffffff; /* solid white */
     cursor: pointer;
+    margin: auto;
 }

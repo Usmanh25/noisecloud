@@ -28,3 +28,14 @@
 
 bundle.js
 bundle.js.map
+
+# Add these lines:
+
+# Windows metadata that corrupts git refs
+*.Zone.Identifier
+
+# Wget logs that clutter your repo
+wget-log
+
+# Optional: sourcemaps often not needed in git
+*.map

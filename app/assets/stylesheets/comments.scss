@@ -4,69 +4,91 @@
 
 .comment-form-container {
     display: flex;
-    margin: 20px 20px 20px 20px;
+    justify-content: center;
+    align-items: center; 
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
 .comment-form-profile-pic {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #333;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
     border-radius: 100%;
     background-image: url("https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg");
     background-size: cover;
 }
 
 .comment-form {
-    margin-left: 20px;
-    width: 89%;
-    border: 1px solid rgb(227, 227, 227);
-    border-radius: 3px;
-    background-color: rgb(245, 245, 245);
+    width: 100%;
 }
 
 .comment-form input {
-    margin: 10px 10px 10px 10px;
-    width: 96%;
-    height: 60px;
-    color: black;
-    border: 1px solid rgb(227, 227, 227);
-    border-radius: 3px;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    font-size: 16px;
+    width: 100%;
+    height: 35px;
+    padding: 8px 10px;
+    color: white;
+    background-color: rgb(50, 51, 50);
+    border: none;
+    border-radius: 4px;
+    box-shadow: none; 
+    outline: none;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 13px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .comment-form input:focus {
-    outline: none;
+    outline: 2px solid #888;
+    outline-offset: 2px;
 }
 
 .comments-index-container {
-    width: 800px;
+    // background-color: red;
+    width: 100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 }
 
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    // background-color: yellow blue;
 }
 
 .comment-obj-container {
     display: flex;
-    justify-content: space-between;
-    margin: 0px 0px 20px 0px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    // background-color: blue orange;
+    word-break: break-word;
 }
+
 
 .comment-obj {
     display: flex;
+    // width: 100%;
+    // background-color: purple;
+    // margin-bottom: 15px;
 }
 
 .comment-body {
     display: flex;
-    flex-direction: column;
+    padding: 5px;
+    // background-color: aqua;
     margin: 0px 0px 0px 5px;
+    color: white;
 }
 
 .comment-profile-pic {
     width: 50px;
     height: 50px;
-    border: 1px solid #333;
     border-radius: 100%;
     background-image: url("https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg");
     background-size: cover;
@@ -74,7 +96,7 @@
 
 .comment-commenter-username {
     font-size: 13px;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
     margin: 0px 0px 5px 0px;
 }
 
@@ -86,32 +108,163 @@
 .comment-body-text {
     font-size: 14px;
     margin-top: 8px;
+    // background-color: black;
     margin-left: 25px;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
+}
+/* Hide the delete icon by default */
+.comment-obj-right {
+  display: none;
 }
 
+/* Show it on hover */
+.comment-obj-container:hover .comment-obj-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+/* Style the button and icon */
+.comment-obj-right button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-delete {
+  color: red;
+  font-size: 18px;
+}
+
+.track-delete:hover {
+    cursor: pointer;
+}
+
+/* Hide the delete icon by default */
 .comment-obj-right {
+  display: none;
+}
+
+/* Show it on hover */
+.comment-obj-container:hover .track-d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+/* Style the button and icon */
+// .comment-body-wrapper:hover {
+//     .track-delete {
+//         display: 
+//     }
+// }
+
+.track-delete {
+  color: red;
+  font-size: 18px;
+}
+
+.comment-body-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    justify-content: center;
+    margin-left: 10px;
+    width: 100%;
+    // background-color: yellow;
+    color: white;
 }
 
-
-.delete-comment-btn {
-    display: none;
-    width: 25px;
-    height: 25px;
+.comment-meta {
     font-size: 12px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(219, 219, 219);
-    border-radius: 3px;
+    color: gray;
+    margin-bottom: 4px;
 }
 
-.comment-obj-container:hover .delete-comment-btn {
-    display: inline-block;
+.comment-time {
+    margin-left: 5px;
+    font-style: italic;
+    color: #aaa;
 }
 
-.delete-comment-btn:hover {
+.comment-commenter-username {
+    font-weight: bold;
+    text-decoration: none;
+    color: gray;
     cursor: pointer;
+}
+
+.comment-commenter-username:hover {
+    text-decoration: underline;
+    color: lightgray;
+}
+
+/* Indent the orange comment container without affecting footer layout */
+.comment-obj-container {
+  display: flex;
+  width: 90%;          /* indent relative to parent */
+  margin-left: 75px;   /* match .comment-form-container */
+  // margin-bottom: 15px;
+  // padding: 10px;
+  // background-color: orange;
+  word-break: break-word;
+  position: relative;  /* needed to absolutely position trash icon if desired */
+}
+
+/* Keep inner comment content aligned full width */
+.comment-obj {
+  display: flex;
+  width: 90%;
+  // padding: 25px;
+  // background-color: orange purple;
+  margin-top: 15px;
+}
+
+/* Hide trash icon by default */
+.comment-obj-right {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+/* Only show trash icon when hovering over yellow comment body */
+.comment-body-wrapper:hover ~ .comment-obj-right,
+.comment-body-wrapper:hover + .comment-obj-right {
+  display: flex;
+}
+
+/* Style the trash button and icon properly */
+.comment-obj-right button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  width: 100%;
+  // background-color: yellow;
+  color: white;
+}
+
+/* Trash icon styling */
+.track-delete,
+.comment-obj-right svg {
+  color: red;
+  font-size: 18px;
 }

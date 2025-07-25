@@ -5,12 +5,12 @@ import {
     REMOVE_PLAY_TRACK
 } from '../actions/track_playbar_actions'
 
-const _nullPlay = {
+const l = {
     currentTrack: null,
     isPlaying: false
 }
 
-const trackPlaybarReducer = (state = _nullPlay, action) => {
+const trackPlaybarReducer = (state = l, action) => {
 
     Object.freeze(state);
     const nextState = Object.assign({}, state)
@@ -21,7 +21,7 @@ const trackPlaybarReducer = (state = _nullPlay, action) => {
             nextState.isPlaying = true
             return nextState
         case REMOVE_PLAY_TRACK:
-            return _nullPLay
+            return _nullPlay
         case PLAY_TRACK:
             nextState.isPlaying = true
             return nextState

@@ -1,27 +1,19 @@
 class Track < ApplicationRecord
-    validates :title, :uploader_id, :artist, :genre, presence: :true
-    # validate :audio_validation
+  validates :title, :artist, :genre, :uploader_id, presence: true
+  validates :track, attached: true, content_type: ['audio/mpeg', 'audio/mp3']
+  validates :image, content_type: ['image/png', 'image/jpg', 'image/jpeg']
 
-    belongs_to :uploader,
-        primary_key: :id,
-        foreign_key: :uploader_id,
-        class_name: :User
+  has_one_attached :track
+  has_one_attached :image
 
-    has_many :comments, 
-        primary_key: :id,
-        foreign_key: :track_id,
-        class_name: :Comment,
-        dependent: :destroy 
-    
-    has_one_attached :image
-    has_one_attached :audio
+  belongs_to :uploader,
+    primary_key: :id,
+    foreign_key: :uploader_id,
+    class_name: :User
 
-    # def audio_validation
-    #     unless self.audio.attached?
-    #         errors[:audio] << " is required*"
-    #     end
-    # end
-
+  has_many :comments, 
+    primary_key: :id,
+    foreign_key: :track_id,
+    class_name: :Comment,
+    dependent: :destroy 
 end
-
-

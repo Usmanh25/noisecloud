@@ -1,80 +1,16 @@
-.app-discover1 {
+.upload {
     height: 100%;
     width: 100%;
-    background-color: none;
-}
-
-.creators-tab {
-    width: 1240px;
-    margin: auto;
-    height: 75px;
-    padding: 0px, 30px, 0px, 30px;
-    background-color: white;
-    margin-top: 30px;
-}
-
-.creators-tab ul {
-    display: flex;
-}
-
-.creators-tab ul {
-
-    color: #333;
-    line-height: 48px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    margin-top: 30px;
-}
-
-#upload-only {
-    color: #ff5500;
-    border-bottom: 2px solid #ff5500;
-    margin-left: -40px;
-}
-
-.creators-tab ul:hover {
-    border-bottom: 2px solid black;
+    background-color: transparent;
 }
 
 .upload-main {
     width: 1240px;
-    height: 100vh;
-    background-size: 100%, 100%;
-    background-image: url(https://va.sndcdn.com/up/ProU_CUPTO.jpg);
-    background-position: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    padding-top: 10%;
-}
-
-
-.upload-screen {
-    height: 388px;
-    width: 800px;
-    margin: auto;
-    background-color: white;
-    border: 1px solid rgba(14, 13, 13, 0.755);
-    box-shadow: 0 2px 12px -5px rgba(0,0,0,.1);
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 47px;
-}
-
-.upload-screen h2 {
-    margin-top: 16%;
-    font-size: 22px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(187, 185, 185);
-}
-
-.upload-screen input {
-   	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px auto 0 auto;
 }
 
 .inputfile + label {
@@ -85,7 +21,7 @@
     font-size: 14px;
     line-height: 20px;
     white-space: nowrap;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
     font-weight: 100;
     text-align: center;
     vertical-align: baseline;
@@ -106,37 +42,45 @@
 }
 
 .basic-file-box {
-    width: 823px;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #fff;
-    border: 1px solid #f2f2f2;
+    width: 1040px;
+    height: 320px;
+    margin: 0 auto;
+    border: 2px dashed grey;
     box-shadow: 0 2px 12px -5px rgba(0,0,0,.1);
     border-radius: 2px;
-    overflow:auto;
+    overflow: visible;
 }
 
 .file-header {
     display: flex;
     justify-content: left;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
     width: 748px;
     height: 39px;
     margin: 13px 0px 0px 13px;
 }
 
+.song-details input,
+.song-details select,
+.upload-audio {
+    margin: 0 0 4px 10px;
+    border: 1px solid black;
+    color: black;
+}
+
+.song-details input,
+.song-details select {
+    margin: 0 0 6px 10px;
+}
 
 .file-info {
     width: 100%;
-    height: 320px; 
-    background-color: #fff;
-    margin-top: 3%;
+    height: 100%; 
 }
 
 .file-header h2 {
     margin: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
     font-size: 24px;
     color: #333;
     margin-bottom: 10px;
@@ -147,31 +91,37 @@
     height: 260px;
     float: left;
     margin: 2.5% 0px 2.5% 4.5%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
 }
 
 .song-artwork-upload {
-    width: 260px;
-    height: 260px;
-    background-image: url("https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg");
-    float: left;
-    margin: 2.5% 0px 2.5% 4.5%;
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    margin: 10px auto;
 }
 
 .song-artwork-upload2 {
-    width: 260px;
-    height: 260px;
-    background-image: linear-gradient(135deg,#846170,#70929c);
-    float: left;
-    margin: 2.5% 0px 2.5% 4.5%;
-}  
-
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin: 10px auto;
+}
 
 .upload-button-holder {
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    border-radius: 10px;
-    margin-bottom: 170px; 
-    margin-left: 30%;
-    height: 30px;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    height: 35px;
+    width: 100%;
+    display: flex;   
+    justify-content: center;
+    align-items: center;  
 }
 
 .upload-image {
@@ -183,58 +133,64 @@
     z-index: -1;
 }
 
-.upload-image + label {
-    padding: 2px 11px 2px 10px;
-    border: 1px solid #e5e5e5;
-    background-color: #ff5500;
-    font-size: 14px;
-    border-radius: 6px;
-    line-height: 20px;
-    white-space: nowrap;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    cursor: pointer;
-    font-weight: 100px;
-    color: #fff;
+.upload-image + label:hover {
+    background-color: rgb(185, 185, 185); 
+    transition: background-color 0.5s ease;
+    color: black;
 }
 
-
-
+.upload-image + label {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: white;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    width: 100px;
+    height: 100%;
+    border-radius: 20px;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    cursor: pointer;
+    font-weight: 100px;
+}
 
 .song-details {
-    margin-right: 25px;
-    margin-top: 20px;
-    width: 471px;
-    height: 320px;
-    background-color: #fff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px; 
+    padding-top: 10px;
+    padding-bottom: 4px;
+    margin-right: 50px;
+    width: 470px;
+    height: 100%;
     float: right;
-    align-items: center;
 }
 
 .song-details p {
-    font-size: 14px;
-    margin: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    margin: 1px 0 1px 10px;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
     font-weight: bold;
-    color: #333;
+    color: white;
 }
 
 .song-details input {
     margin-left: 10px;
     width: 430px;
     height: 26px;
-    padding: 2px 7px 2px 7px;
     border-radius: 4px;
-    border: 1px solid #ccc;
-
 }
+
 .song-details select {
     margin-left: 10px;
     width: 193.297px;
     height: 24px;
     border-radius: 4px;
-    border: 1px solid #ccc;
-    color: #333;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
     font-size: 14px;
 }
 
@@ -242,28 +198,26 @@
     margin-left: 10px;
     padding: 2px 7px 2px 7px;
     border-radius: 4px;
-    border: 1px solid #ccc;
     transition: border-color .1s;
     height: 124px;
     width: 430px;
 }
 
 .upload-footer {
-    width: 450px;
-    height: 26px;
-    padding: 35px 25px 20px 25px;
-    border-top: 1px solid #ccc;
-    background-color: #fff;
     display: flex;
-    justify-content: left;
-    margin-left: 320px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 4px 0;
+    gap: 10px;
 }
 
 .upload-footer p {
     margin-right: 67%;
     margin-left: 15px;
     font-size: 12px;
-    color: #333;
+    color: white;
 }
 
 .upload-footer button {
@@ -273,120 +227,243 @@
 .cancel-button-upload {
     border: none;
     background-color: #fff;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
     font-size: 14px; 
 }
 
-.save-button-upload {
-    background-color: #ff5500;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    color: #fff;
-    width: 53px;
-    height: 26px;
-    padding: 2px 11px 2px 11px;
-    border: 1px solid #e5e5e5;
-    line-height: 20px;
+.upload-button-upload:hover {
+    background-color: rgb(185, 185, 185); /* light grey on hover */
+    transition: background-color 0.5s ease; /* 👈 this is the key */
+    color: black;
+
+}
+
+.upload-button-upload {
+    background-color: white;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
     cursor: pointer;
-    box-sizing: border-box;
-    border-radius: 3px;
+    border: none;
 }
 
-.success-main {
-    width: 1240px;
-    height: 100vh;
-    background:url(https://blog.bannersnack.com/wp-content/uploads/2018/06/design-a-soundcloud-banner.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10%;
+.upload-audio-input {
+    margin-top: 20px;
+  margin-left: 10px;
 }
 
-.current-song-success {
-   margin-top: 7%;
-   width: 748px;
-   height: 128px;
-   padding: 25px;
-   border: 1px solid #f2f2f2; 
-   background-color: #fff;
-   margin-left: auto;
-   margin-right: auto;
-   box-shadow: 0 2px 12px -5px rgba(0,0,0,.1);
-   border-radius: 5px;
-   display: flex;
+.upload-audio-input input[type="file"] {
+  padding: 6px;
+  font-family: Interstate, Lucida Grande, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
 }
 
-.upload-song-pic {
-    width: 120px;
-    height: 120px;
-    background-color: #fff;
+.upload-errors {
+  color: red;
+  margin-bottom: 10px;
+  font-family: Interstate, Lucida Grande, Arial, sans-serif;
+  font-size: 13px;
 }
 
-.upload-info {
-    width: 367px;
-    height: 128px;
-    background-color: transparent;
-    margin-left: 2%;
+.upload-audio-input label {
+  font-size: 14px;
+  font-family: Interstate, Lucida Grande, Arial, sans-serif;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-.upload-username {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    color: #999;
-    line-height: 1.3px;
-    margin-top: 2%;
-}
-
-.upload-song-title {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    font-weight: 400px;
-    line-height: 1.3px;
-    margin-top: 7%;
-    margin-bottom: 15%;
-}
-
-.link-to-song {
-    margin-top: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    line-height: 1.3px;
-    color: #38d;
-    text-decoration: none;
-    font-weight: 400px;
-    cursor: pointer;  
-}
-
-.link-to-song:hover {
-    margin-top: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    line-height: 1.3px;
-    color: #333;
-    text-decoration: none;
-    font-weight: 400px;
-    cursor: pointer;  
+.upload-audio {
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 4px;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 13px;
 }
 
 .upload-complete {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
     font-size: 14px;
     color: #333;
     margin-bottom: 2%;
 }
 
-.success-message {
-    width: 230px;
-    height: 120px;
-    background-color: #fff;
-    margin: auto;
+.upload-page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1000px;
+    margin-left: 100px;
+    margin-top: 135px;
+    color: white;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
+}
+
+.upload-page-header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.upload-footer-text {
+    margin-top: 80px;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #333;
+    font-size: 12px;
+    color: grey;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
+}
+
+input[type="file"] {
+  color: white;
+}
+
+.upload-image-error {
+  color: red;
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+  max-width: 100%; 
+}
+
+
+// _________________________________________UPLOAD SUCCESS__________________________________________________________________
+
+
+.success-main {
+    width: 1240px;
+    height: 100vh;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    padding-top: 10%;
+}
+
+    
+.current-song-success {
+    width: 748px;
+    min-height: 250px;
+    padding: 25px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+    border: 2px dashed white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px -5px rgba(0,0,0,.1);
+    background-color: transparent;
+}
+
+.upload-song-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.upload-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 250px; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.upload-username,
+.upload-song-title {
     font-size: 20px;
-    font-weight: 500px;
-    line-height: 33px;
-    margin-left: 10px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+}
+
+.link-to-song {
+  align-self: flex-end;
+  margin-top: auto;
+  font-size: 26px;
+  color: #38d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-to-song:hover {
+    color: grey;
+}
+
+.success-message {
+    width: 748px; 
+    height: auto;
+    background-color: transparent;
+    margin: 0 auto 20px auto; 
+    padding: 20px;
+    text-align: center;
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.4;
+    border-radius: 5px;
+}
+
+.upload-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* align to left of the right box */
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.uploaded-by {
+    color: white;
+}
+
+.upload-username {
+    text-decoration: none;
+    color: #38d;
+    
+}
+.upload-username:hover {
+    color: grey;
+}
+
+.upload-loading-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+}
+
+.upload-spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff5500;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.uploading-text {
+  font-family: Interstate, Lucida Grande, Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.username-container {
+margin-top: 20px;
 }

@@ -1,1 +1,6 @@
-json.extract! comment, :id, :body, :commenter_id, :track_id, :created_at
+
+json.extract! comment, :id, :body, :track_id, :created_at
+json.commenter do
+  json.extract! comment.commenter, :id, :email
+end
+json.commenter_username comment.commenter.email.split('@').first

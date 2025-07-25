@@ -1,20 +1,28 @@
 .volume-container {
     width: 35px;
-    background-color: rgb(235, 235, 235);
+    background-color: black; 
     height: 120px;
     position: absolute;
     bottom: 49px;
     border-radius: 5%;
     box-sizing: border-box;
-    border: 1px solid gray;
+    border: 1px solid #333;
 }
 
 .volumebar {
     width: 100px;
-    color: red;
     transform-origin: 57px 50px;
     transform: rotate(-90deg);
     cursor: pointer;
+    accent-color: white;
+}
+
+.volumebar::-webkit-slider-thumb {
+    background-color: black;
+}
+
+.volumebar::-moz-range-thumb {
+    background-color: black;
 }
 
 .trackplaybar {
@@ -22,63 +30,79 @@
     justify-content: center;
     position: fixed;
     width: 100%;
-    height: 48px;
+    height: 50px;
     bottom: 0;
     z-index: 999;
-    margin-left: -15px;
-    border-top: 1px solid gray;
-    color: black;
-    background-color: rgb(235, 235, 235);
+    color: white;
+    background-color: #333;
 }
   
 .track-scrub-container {
     display: flex;
     justify-content: space-between;
     position: relative;
-    width: 1240px;
-    background-color: rgb(235, 235, 235);
+    width: 100%;
+    background-color: #333;
 }
   
 .playpauseloop {
     display: flex;
-    justify-content: space-evenly;
-    width: 200px;
-    background-color: rgb(235, 235, 235);
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    gap: 15px;
+    margin-left: 120px;
 }
 
 .backplayloopbuttons {
-    background-color: rgb(235, 235, 235);
-    color: #333;
+    background-color: transparent;
+    color: white;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+}
+
+.backplayloopbuttons:first-child {
+    font-size: 22px; 
+}
+
+.backplayloopbuttons:nth-child(2) {
+    background-color: white;
+    color: #333;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .is-looping-button {
-    background-color: rgb(235, 235, 235);
+    background-color: transparent;
     cursor: pointer;
     border: none;
-    color: #ff5502;
+    color: #ff5502; 
 }
   
 .track-scrub-bar {
     display: flex;
     align-items: center;
     flex: 1;
-    padding: 0 24px;
+}
 
-    span:last-child {
-        width: 32px;
-        text-align: left;
-        margin-left: 10px;
-        font: 12px/1.4 Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-        cursor: pointer;
-    }
-
+.track-scrub-bar span:last-child {
+    width: 32px;
+    text-align: left;
+    margin-left: 10px;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .elapsed {
     margin-right: 10px;
-    font: 12px/1.4 Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 12px;
 }
 
 .scrub-bar {
@@ -89,8 +113,47 @@
 
 .scrub-seeker {
     width: 100%;
-    height: 1px;
+    height: 4px; 
+    border-radius: 2px;
     cursor: pointer;
+    background: linear-gradient(
+        to right,
+        orange 0%,
+        orange calc(var(--seek-percentage, 0%) + 0%),
+        #666 calc(var(--seek-percentage, 0%) + 0%),
+        #666 100%
+    );
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.scrub-seeker::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: orange;
+    cursor: pointer;
+    display: none;
+}
+
+.scrub-seeker:hover::-webkit-slider-thumb {
+    display: block;
+}
+
+.scrub-seeker::-moz-range-thumb {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: orange;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.scrub-seeker:hover::-moz-range-thumb {
+    display: block;
 }
 
 .volume {
@@ -102,56 +165,63 @@
 }
 
 .volume-icon {
-    background-color: rgb(235, 235, 235);
+    background-color: transparent;
     border: none;
     cursor: pointer;
+    color: white;
 }
   
 .playbar-track-item {
     display: flex;
     align-items: center;
-    height: 48px;
+    height: 50px;
     width: 360px;
-    background-color: rgb(235, 235, 235);
     padding: 0 8px;
     box-sizing: border-box;
 }
 
 .track-art {
-    margin: 0 10px 0 0;
-    height: 47px;
-    
-    img {
-        width: 47px;
-        height: 47px;
-        box-sizing: border-box;
-        object-position: 50% 50%;
-        object-fit: cover;  
-    }
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 
+.track-art img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .track-info {
     display: flex;
-    height: 45px;
-    background-color: rgb(235, 235, 235);
     flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    height: 100%;
 }
 
 .artist {
     font-size: 10px;
     font-weight: bold;
-    margin-top: 10px;
+    color: gray;
+    margin: 0;
+    line-height: 1.1;
 }
 
 .tracklink {
-    font-size: 12px;
-    a {
-        color: #ff5502;
-        text-decoration: none;
-        font: 12px/1.4 Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-        &:hover {
-            color: #333;
-        }
-    }
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.tracklink a {
+    color: white;
+    text-decoration: none;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
+}
+
+.tracklink a:hover {
+    color: #ff5502;
 }

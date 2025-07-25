@@ -3,103 +3,132 @@
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .track-delete {
-    color: red;
-    visibility: hidden;
-    padding-right: 10px;
-    padding-top: 25px;
+  color: red;
+  visibility: hidden;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 25px;
 }
 
 .track-list-item {
+    // background-color: blue;
     display: flex;
-    border-bottom: 1px solid lightgray;
-    padding-top: 15px;
-    padding-left: 20px;
-    position: relative;
-    width: 95%;
-    justify-content: space-between; 
+    // width: 100%;
+    margin-bottom: 20px;
+    // margin-left: 0;
+    // padding-left: 0;
 }
-
-.track-list-item a {
-    margin-top: 45px;
-    margin-left: 20px;
-    height: 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-
 .track-list-item:hover {
-    background-color: lightgray;
-    border-radius: 8px;
-
-    .track-info {
-        background-color: lightgray;
+    .track-delete {
+        visibility: visible;
+        cursor: pointer;
     }
 }
 
-.track-list-item:hover .delete-song {
-    visibility: visible;
-    cursor: pointer;
+.track-list-item a {
+    display: flex;
+    // background-color: pink;
+    padding-left: 0;
+    // width: 50%;
+    // height: 50%;
+    text-decoration: none;
 }
 
-.track-list-item > .play-button {
-    display: none;
-}
-
-.track-list-item:hover > .play-button {
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 55px;
-    cursor: pointer;
-}
 
 .track-list-item-container {
     display: flex;
-    padding-bottom: 15px;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;    // margin-left: 30px; /* tweak this value to match "first-upload" */
+}
+
+.track-list-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.track-list-genre {
+    margin-right: 50px;
+    font-size: 14px;
+    padding: 3px;
+    text-align: center;
+    color: white;
+    background-color: #666;
+    width: 60px;
+    border-radius: 20px;
 }
 
 .track-image {
-    width: 120px;
-    height: 120px;
+    width: 155px;
+    height: 155px;
+    border-radius: 5px;
+}
+
+.track-image-container {
+    border-radius: 5px;
+
 }
 
 .track-info {
     display: flex;
-    align-items: left;
-    padding-left: 15px;
-    justify-content: space-evenly;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    font-size: 16px;
+    flex-direction: column;
+    justify-content: center; /* vertically center within the parent */
+    font-family: Interstate, Lucida Grande, Arial, sans-serif;
 }
 
 .track-list-title {
-    padding-left: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #333;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    // margin-bottom: 2px; /* tighten spacing */
+}
+.track-list-title:hover {
+    font-size: 14px;
+    color: #666;
+    // margin-bottom: 2px; /* tighten spacing */
+    
 }
 
-.track-artist {
-    font-size: 16px;
+
+.track-artist-user {
     font-weight: bold;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    color: black;
-    margin-left: 10px;
+    font-size: 13px;
+    color: lightgrey;
+    padding: 0;
+}
+
+.track-artist-user:hover {
+    font-size: 13px;
+    color: #666;
+    // margin-top: 0px; /* remove extra spacing */
 }
 
 .play-button {
-    width: 50px;
-    height: 50px;
+    width: 45;
+    height: 45;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .play-button > .play-container {
     height: 50px;
     width: 50px;
-    background-color: #ff5502;
+    background-color: white;
+}
+
+.first-upload-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .first-upload {
+    padding: 5px 10px 5px 10px;
     border: none;
     border-radius: 8px;
     background-color: #ff5502;
@@ -107,8 +136,7 @@
     text-decoration: none;
     font-size: 30px;
     text-align: center;
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    width: 380px;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
 }
 
 .user-show-page-container {
@@ -118,80 +146,110 @@
 }
 
 .user-header {
-    width: 1227px;
+    position: relative;
+    width: 1080px;
+    height: 275px;
     display: flex;
-    height: 435px;
-    background: linear-gradient(to right,#ff9c5a,#ff5502);
+    align-items: center; /* vertica hover l centering */
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.user-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    z-index: 0;
+    transform: scale(1.3);
 }
 
 .user-header-left-container {
     display: flex;
-    align-items: center;
-    padding-left: 20px;
-    width: 50%;
+    align-items: center; 
+    padding-left: 40px;
+    width: auto;
+    z-index: 1; 
+    position: relative;
 }
 
 .user-header-left {
     display: flex;
-    width: 95%;
-    margin-bottom: 150px;
-    margin-left: 20px;
+    align-items: center;
 }
 
 .user-profile-pic {
-    height: 245px;
-    width: 250px;
-    border-radius: 50%;
     margin-top: 40px;
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+    border: 1px solid white;
     background-image: url("https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg");
 }
 
 .username-container {
-    width: 50%;
-    margin-top: 40px;    
+    margin-left: 25px;  
 }
 
 .username {
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
     padding-left: 8px;
     padding-right: 8px;
     margin-top: 40px;
     font-size: 24px;
     background-color: #333;
     color: white;
-    margin-left: 25px;
+    // margin-left: 25px;
 }
 
 .user-bottom {
-    background-color: rgb(235, 235, 235);
-    width: 1227px;
-    padding-bottom: 50px;
+    // background-color: blue;
+    width: 1080px;
+
+    // padding-bottom: 50px;
 }
 
 .uploaded-tracks-container {
-    width: 100%;
-    margin-top: 20px;
-    padding-top: 20px;
+    width: 100%;  /* or keep consistent with .user-tracks-list */
+    // margin-left: 0;
+    // padding-left: 0;
+    margin-top: 38px;
+    margin-bottom: 28px;
 }
 
 .uploaded-tracks {
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    margin-left: 70px;
-    font-size: 20px;
-    border-bottom: 1px solid black;
+    font-size: 22px;
+    // font-weight: 300;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    // margin-left: 70px;
+    // background-color: aqua;
+    // padding: 0px 20px 80px 1000px;
+    // margin-top: 800px;
+    color: white;
+    // border-bottom: 1px solid black;
 }
 
 .user-tracks{
     display: flex;
-    padding-top: 15px;
+    padding-top: 0px;
+    // background-color: red;
 }
 
 .user-tracks-list {
-    width: 75%;
+    width: 100%; /* take up the full row */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-right: 1px solid lightgray;
+    // background-color: orange;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .user-show-bottom-right {
@@ -209,28 +267,29 @@
 }
 
 .tracks {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
     font-size: 16px;
-    color: black;
+    color: white;
 }
 
 .number-tracks {
     padding-top: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    color: black;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
+    font-size: 20px;
+    color: white;
     font-weight: bold;
 }
 
 .meet-the-creator-user {
+    text-align: left;
     width: 90%;
-    border-bottom: 1px solid gray;
-    color: #999;
+    // border-bottom: 1px solid gray;
+    color: white;
     font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
     font-size: 16px;
     padding-bottom: 10px;
-    text-align: center;
+    // text-align: center;
 }
 
 .links-container {
@@ -244,35 +303,26 @@
     margin-top: 20px;
 }
 
+.link-buttons-user svg {
+  width: 50px;
+  height: 50px;
+}
+
 .github {
     text-decoration: none;
-    background-color: black;
-    font-size: 13px;
-    border-radius: 5px;
-    padding: 20px;
+    height: 50px;
+    width: 50px;
     color: white;
 }
 
 .linkedin {
     text-decoration: none;
-    background-color: black;
-    font-size: 13px;
-    border-radius: 5px;
-    margin: 0px 5px 0px 0px;
-    padding: 20px;
+    height: 50px;
+    width: 50px;
     color: white;
-    margin-left: 5px;
 }
 
-.angellist {
-    text-decoration: none;
-    background-color: black;
-    font-size: 13px;
-    border-radius: 5px;
-    margin: 0px 5px 0px 0px;
-    padding: 20px;
-    color: white;
-}
+
 
 .fine-print2 {
     margin-bottom: 40px;

@@ -2,20 +2,22 @@ class Api::TracksController < ApplicationController
 
     def index
         @tracks = Track.all
-        # render :index
         render 'api/tracks/index'
     end
 
     def show
-        @track = Track.find_by(id: params[:id])
-        render :show
+        @track = Track.includes(comments: :commenter).find_by(id: params[:id])
+        if @track
+            render :show
+        else
+            render json: { error: "Track not found" }, status: 404
+        end
     end
 
     def create
         @track = Track.new(track_params)
         if @track.save
             render :show
-            # render 'api/tracks/show'
         else
             render json: @track.errors.full_messages, status: 422
         end
@@ -23,24 +25,27 @@ class Api::TracksController < ApplicationController
 
     def update
         @track = Track.find_by(id: params[:id])
-        if @track.update(track_params)
+        if @track&.update(track_params)
             render :show
-            # render 'api/tracks/show'
         else
-            render json: @track.errors.full_messages, status: 422
+            render json: @track ? @track.errors.full_messages : ["Track not found"], status: 422
         end
     end
 
     def destroy
         @track = Track.find_by(id: params[:id])
-        @track.destroy
-        render json: {}
+        if @track
+            @track.destroy
+            render json: {}
+        else
+            render json: { error: "Track not found" }, status: 404
+        end
     end
 
     private
 
     def track_params
-        params.require(:track).permit(:title, :uploader_id, :genre, :artist, :audio_file, :image_file)
+        params.require(:track).permit(:title, :artist, :genre, :uploader_id, :track, :image)
     end
 
 end
