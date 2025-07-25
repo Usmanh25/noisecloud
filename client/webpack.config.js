@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/noiseCloud.jsx',  // adjust this if your entry is different
+  entry: './src/noiseCloud.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -20,6 +20,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html', // must exist!
+    }),
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
