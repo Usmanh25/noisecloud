@@ -1,26 +1,22 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/noiseCloud.jsx', // match your original entry
+  entry: './src/index.jsx',  // adjust this if your entry is different
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '*'],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/env', '@babel/react'],
-          },
-        },
+        use: ['babel-loader'],
       },
     ],
   },
@@ -31,6 +27,5 @@ module.exports = {
     historyApiFallback: true,
     port: 3000,
   },
-  devtool: 'source-map',
-  mode: 'development',
+  mode: 'production',
 };
