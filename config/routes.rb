@@ -8,5 +8,11 @@ Rails.application.routes.draw do
     resources :tracks, only: [:index, :show, :create, :update, :destroy]
     resources :comments, only: [:create, :destroy, :index]
   end
+
   root to:"static_pages#root"
+  
+  if Rails.env.production?
+    get '/migrate_db', to: 'utils#migrate'
+    get '/seed_db', to: 'utils#seed'
+  end
 end
