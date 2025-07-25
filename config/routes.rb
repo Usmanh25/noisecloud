@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   end
 
   root to:"static_pages#root"
-  
-  if Rails.env.production?
-    get '/migrate_db', to: 'utils#migrate'
-    get '/seed_db', to: 'utils#seed'
-  end
+
+  # if Rails.env.production?
+  #   get '/migrate_db', to: 'utils#migrate'
+  #   get '/seed_db', to: 'utils#seed'
+  # end
 end
