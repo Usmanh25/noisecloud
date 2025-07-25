@@ -16,6 +16,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'rack-cors'
 gem 'aws-sdk-s3'
 gem 'active_storage_validations'
+gem 'terser'
+
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
