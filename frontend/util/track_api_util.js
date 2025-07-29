@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export const fetchTrack = trackId => {
     return $.ajax({
         method: "GET",
