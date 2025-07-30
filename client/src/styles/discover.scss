@@ -1,0 +1,190 @@
+.discover-main {
+	background-color: transparent;
+	width: 100vw;
+	margin-left: -17px;
+	padding-top: 50px;
+}
+
+.discover-co-main {
+	display: flex;
+	justify-content: space-between;
+	width: 1227px;
+	background-color: transparent;
+	margin: auto;
+	font-family: 'Oxygen';
+	padding-bottom: 50px;
+}
+
+.track-genre {
+	width: 800px;
+	padding: 0px 30px 0px 0px;
+	margin: 20px 30px;
+}
+
+.genre-header {
+	margin: 0px 0px 5px 0px;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
+	margin-left: 50px;
+}
+
+.scroll-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.scroll-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	pointer-events: none;
+	background: transparent;
+}
+
+.track-list {
+	display: flex;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	padding: 10px 30px;
+	margin: 0 20px;
+	margin-left: 53px;
+	scroll-snap-type: x mandatory;
+}
+
+.track-list > * {
+	pointer-events: auto;
+}
+
+.track-list::-webkit-scrollbar {
+	display: none;
+}
+
+.track-obj {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px;
+	position: relative;
+	margin: 0px 25px 0px 0px;
+	scroll-snap-align: start;
+}
+
+.track-img-wrapper {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.cover-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 3px;
+	display: block;
+}
+
+.track-img-wrapper::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	opacity: 0;
+	transition: opacity 0.1s ease;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.track-img-wrapper:hover::after {
+	opacity: 0.5;
+}
+
+.play-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.track-img-wrapper:hover .play-btn {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.track-title-a {
+	text-decoration: none;
+	margin-top: 5px;
+	font-size: 14px;
+	color: white;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
+}
+
+.track-artist-under-title {
+	text-decoration: none;
+	margin: 5px 0px 3px 0px;
+	font-size: 12px;
+	font-weight: bold;
+	color: grey;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
+}
+
+.scroll-arrow {
+	position: absolute;
+	top: 42%;
+	transform: translateY(-50%);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.25);
+	border: none;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	z-index: 10;
+}
+
+.scroll-arrow.left {
+	left: 60px;
+}
+
+.scroll-arrow.right {
+	right: 5px;
+}
+
+.scroll-arrow.left.hidden {
+	display: none;
+}
+
+.scroll-arrow:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.meet-the-creator-discover {
+	color: white;
+	font-weight: bold;
+	font-family: Interstate, Lucida Grande, Arial, sans-serif;
+	font-size: 14px;
+	text-align: left;
+	margin-top: 50px;
+	margin-left: 25px;
+}
+
+.link-buttons-user {
+  gap: 30px;
+}
