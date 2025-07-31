@@ -78,7 +78,7 @@ class Splash extends React.Component{
 
                 <div
                     className="mobile-banner"
-                    style={{ backgroundImage: `url('/images/mobile-banner.png')` }}
+                    style={{ backgroundImage: `url('/mobile-banner.png')` }}
                 >
                     <div className="mobile-info">
                         <h2>Never stop listening</h2>
@@ -96,7 +96,7 @@ class Splash extends React.Component{
                 <div
                     className="calling-all-creators"
                     style={{
-                        backgroundImage: `url('/images/creator-banner.png')`,
+                        backgroundImage: `url('/creator-banner.png')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'top',
                         backgroundRepeat: 'no-repeat',
