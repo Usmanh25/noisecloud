@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://songcloud-v3.vercel.app', 'http://localhost:3000'
+    origins 'http://localhost:3000', 'https://songcloud-v3.vercel.app', /https:\/\/songcloud-v3-[a-z0-9]+\.vercel\.app/
 
     resource '*',
       headers: :any,
@@ -8,4 +8,3 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       credentials: true
   end
 end
-
