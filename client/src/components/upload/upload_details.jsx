@@ -3,8 +3,23 @@ import React from 'react';
 class UploadDetails extends React.Component {
     render() {
         const preview = this.props.state.imageUrl
-            ? <img src={this.props.state.imageUrl} className="song-artwork-upload2" alt="song preview" />
+            ? (
+                <img
+                    src={
+                        this.props.state.imageUrl.startsWith("/rails")
+                            ? `${process.env.REACT_APP_API_BASE_URL}${this.props.state.imageUrl}`
+                            : this.props.state.imageUrl
+                    }
+                    className="song-artwork-upload2"
+                    alt="song preview"
+                />
+            )
             : <span className="song-artwork-upload"></span>;
+
+
+        // const preview = this.props.state.imageUrl
+        //     ? <img src={this.props.state.imageUrl} className="song-artwork-upload2" alt="song preview" />
+        //     : <span className="song-artwork-upload"></span>;
 
         if (this.props.state.page === 0) {
             return (

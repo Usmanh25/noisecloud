@@ -75,10 +75,19 @@ class UserShow extends React.Component {
 
                         <div className = "user-header-left">
                             <img
+                                src={
+                                    this.props.user.imageUrl?.startsWith("/rails")
+                                    ? `${process.env.REACT_APP_API_BASE_URL}${this.props.user.imageUrl}`
+                                    : this.props.user.imageUrl || "https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg"
+                                }
+                                alt="profile"
+                                className="user-profile-pic"
+                            />
+                            {/* <img
                             src="https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg"
                             alt="profile"
                             className="user-profile-pic"
-                            />
+                            /> */}
                             
                             <div className = "username-container">
                                 <span className = "username">{this.props.user.email.slice(0, this.props.user.email.indexOf('@'))}</span>

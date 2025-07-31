@@ -22,14 +22,7 @@ class TrackShow extends React.Component {
         // this.props.fetchComments(this.props.match.params.commentId)
         // this.props.fetchComments()
     };
-
-    componentDidUpdate() {
-        // this.props.fetchTrack(this.props.match.params.trackId)
-        // this.props.fetchTracks();
-        // this.props.fetchComments(this.props.match.params.commentId)
-        // this.props.fetchComments()
-    };
-    
+  
     
     render() {
         if (!this.props.track) return null;
@@ -41,7 +34,16 @@ class TrackShow extends React.Component {
                 <li className = 'related-genre-item' key = {`song-${idx}`}>
                     
                     <Link to = {`/tracks/${track.id}`}>
-                        <img src= {track.imageUrl} alt= "song-image" className = 'related-image'/>
+                        <img
+                            src={
+                                track.imageUrl?.startsWith("/rails")
+                                ? `${process.env.REACT_APP_API_BASE_URL}${track.imageUrl}`
+                                : track.imageUrl
+                            }
+                            alt="song-image"
+                            className="related-image"
+                        />
+                        {/* <img src= {track.imageUrl} alt= "song-image" className = 'related-image'/> */}
                     </Link>
 
                     <div className = 'genre-song-info'>
@@ -79,7 +81,16 @@ class TrackShow extends React.Component {
                                 <div className="track-header-genre-label">
                                     <h3 className="track-header-genre"># {this.props.track.genre}</h3>
                                 </div>
-                                <img className="track-header-img" src={this.props.track.imageUrl} />
+                                <img
+                                    className="track-header-img"
+                                    alt={this.props.track.title}
+                                    src={
+                                        this.props.track.imageUrl?.startsWith("/rails")
+                                        ? `${process.env.REACT_APP_API_BASE_URL}${this.props.track.imageUrl}`
+                                        : this.props.track.imageUrl
+                                    }
+                                />
+                                {/* <img className="track-header-img" src={this.props.track.imageUrl} /> */}
                             </div>
                         </div>
                     </div>
@@ -113,11 +124,21 @@ class TrackShow extends React.Component {
                         <div>
                                 <div className="link-buttons">
                                     
-                                    <a className="github" href="https://github.com/usmanh25" target="_blank">
+                                    <a 
+                                        className="github" 
+                                        href="https://github.com/usmanh25" 
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        >
                                         <div><FontAwesomeIcon icon={faGithub} className='github'/></div>
                                     </a>
 
-                                    <a className="linkedin" href="https://www.linkedin.com/in/usman-hameed-5486b11b0/" target="_blank">
+                                    <a 
+                                        className="linkedin" 
+                                        href="https://www.linkedin.com/in/usman-hameed-5486b11b0/" 
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
                                         <div><FontAwesomeIcon icon={faLinkedinIn} className='linkedin'/></div>
                                     </a>
 

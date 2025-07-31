@@ -112,7 +112,15 @@ const Discover = ({ fetchTracks, tracks }) => {
             <li key={track.id} className="track-obj">
               <div className="track-img-wrapper">
                 <Link to={`/tracks/${track.id}`}>
-                  <img className="cover-img" src={track.imageUrl} alt={track.title} />
+                  <img
+                    className="cover-img"
+                    src={
+                      track.imageUrl?.startsWith("/rails")
+                        ? `${process.env.REACT_APP_API_BASE_URL}${track.imageUrl}`
+                        : track.imageUrl
+                    }
+                    alt={track.title}
+                  />
                 </Link>
                 <div className="play-btn">
                   <PlayButtonContainer trackId={track.id} track={track} />
@@ -147,8 +155,8 @@ const Discover = ({ fetchTracks, tracks }) => {
       <div className="discover-co-main">
         <div className='discover-tracks-container'>
           {genreTracks["R&B"] && renderGenre("R&B", "Trending R&B tracks")}
-          {genreTracks["Pop"] && renderGenre("Pop", "Trending Pop tracks")}
           {genreTracks["Rap"] && renderGenre("Rap", "Trending Rap tracks")}
+          {genreTracks["Pop"] && renderGenre("Pop", "Trending Pop tracks")}
           {genreTracks["Latin"] && renderGenre("Latin", "Trending Latin tracks")}
           {genreTracks["EDM"] && renderGenre("EDM", "Trending EDM tracks")}
         </div>

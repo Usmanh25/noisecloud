@@ -16,7 +16,16 @@ class UploadSuccess extends React.Component {
 
                 <div className="success-message">Your song is ready for the world to hear!</div>
                 <div className="current-song-success">
-                        <img className="upload-song-pic" src={this.props.state.imageUrl} alt=""/>
+                        <img
+                            className="upload-song-pic"
+                            src={
+                                this.props.state.imageUrl?.startsWith("/rails")
+                                ? `${process.env.REACT_APP_API_BASE_URL}${this.props.state.imageUrl}`
+                                : this.props.state.imageUrl
+                            }
+                            alt=""
+                        />
+                        {/* <img className="upload-song-pic" src={this.props.state.imageUrl} alt=""/> */}
                         
                         <div className="upload-info">
                             <div className="upload-text-group">
