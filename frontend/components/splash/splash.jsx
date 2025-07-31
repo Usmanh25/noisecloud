@@ -78,7 +78,7 @@ class Splash extends React.Component{
 
                 <div
                     className="mobile-banner"
-                    style={{ backgroundImage: `url('/images/mobile-banner.png')` }}
+                    style={{ backgroundImage: `url('/public/mobile-banner.png')` }}
                 >
                     <div className="mobile-info">
                         <h2>Never stop listening</h2>
