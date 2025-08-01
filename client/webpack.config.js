@@ -44,9 +44,15 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'public', to: '.' } 
-      ]
-    })
+        { 
+          from: 'public', 
+          to: '.', 
+          globOptions: {
+          ignore: ['**/index.html'], 
+          },
+        }, 
+      ],
+    }),
   ],
   devServer: {
     static: {
