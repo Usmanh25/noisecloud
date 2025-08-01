@@ -6,7 +6,6 @@ import PlayButtonContainer from "../play_button/play_button_container";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 const API_BASE_URL = process.env.REACT_APP_API_URL;
-console.log("API_BASE_URL =", API_BASE_URL);
 class TrackShow extends React.Component {
 
     constructor(props) {
@@ -27,6 +26,10 @@ class TrackShow extends React.Component {
     render() {
         if (!this.props.track) return null;
 
+        const backgroundImageUrl = this.props.track.imageUrl?.startsWith("/rails")
+            ? `${API_BASE_URL}${this.props.track.imageUrl}`
+            : this.props.track.imageUrl;
+            
         const genreRecommended = this.props.tracks.filter(track => track.genre === this.props.track.genre && track.id !== this.props.track.id);
         const threeItems = genreRecommended.slice(0,3);
         const renderItems = threeItems.map( (track, idx) => {
@@ -59,7 +62,7 @@ class TrackShow extends React.Component {
 
                 <div
                     className="track-header"
-                    style={{ '--track-image': `url(${this.props.track.imageUrl})` }}>
+                    style={{ '--track-image': `url(${backgroundImageUrl})` }}>
                     
                     <div className="track-header-left">
 
