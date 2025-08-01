@@ -13,16 +13,16 @@
  *= require_tree .
  *= require_self
  */
-@import './comments';
-@import './discover';
-@import './modal';
-@import './navbar';
-@import './playbutton';
-@import './splash';
-@import './trackplaybar';
-@import './tracks';
-@import './upload';
-@import './users';
+@use './comments';
+@use './discover';
+@use './modal';
+@use './navbar';
+@use './playbutton';
+@use './splash';
+@use './trackplaybar';
+@use './tracks';
+@use './upload';
+@use './users';
 
 
  html, body {
