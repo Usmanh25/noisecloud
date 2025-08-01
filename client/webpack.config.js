@@ -3,6 +3,7 @@ require('dotenv').config({ path: '.env.production' });
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/noiseCloud.jsx',
@@ -40,6 +41,11 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       process: 'process/browser',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public', to: '.' } 
+      ]
     })
   ],
   devServer: {
