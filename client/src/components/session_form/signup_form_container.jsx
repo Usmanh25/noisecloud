@@ -25,7 +25,9 @@ const mDTP = dispatch => ({
     closeModal: () => {
         dispatch(closeModal());
         dispatch(removeSessionErrors())
-    }
+    },
+    removeErrors: () => dispatch(removeSessionErrors())
+
 
 })
 
