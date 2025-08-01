@@ -38,7 +38,8 @@ class TrackPlaybar extends React.Component {
     const toggledPlay = prevProps.isPlaying !== this.props.isPlaying;
 
     if (trackChanged && this.props.currentTrack) {
-        audioEl.src = this.props.currentTrack.audioUrl;
+        audioEl.src = `${API_BASE_URL}${this.props.currentTrack.audioUrl}`;
+
         audioEl.load();
 
         if (this.props.isPlaying) {
