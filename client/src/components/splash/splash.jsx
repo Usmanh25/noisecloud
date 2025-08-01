@@ -11,8 +11,6 @@ class Splash extends React.Component{
 
     render() {
 
-        if (!this.props) { return null }
-
         const { fetchTracks, tracks, openModal } = this.props;
 
         const sampleTracks = [];

@@ -4,6 +4,7 @@ import PlayButtonContainer from "../play_button/play_button_container";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn, faAngellist } from '@fortawesome/free-brands-svg-icons';
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 const Discover = ({ fetchTracks, tracks }) => {
   useEffect(() => {
@@ -116,7 +117,7 @@ const Discover = ({ fetchTracks, tracks }) => {
                     className="cover-img"
                     src={
                       track.imageUrl?.startsWith("/rails")
-                        ? `${process.env.REACT_APP_API_BASE_URL}${track.imageUrl}`
+                        ? `${API_BASE_URL}${track.imageUrl}`
                         : track.imageUrl
                     }
                     alt={track.title}

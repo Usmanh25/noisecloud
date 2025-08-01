@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FaTrash } from 'react-icons/fa';
 
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 class UserShow extends React.Component {
 
@@ -77,7 +78,7 @@ class UserShow extends React.Component {
                             <img
                                 src={
                                     this.props.user.imageUrl?.startsWith("/rails")
-                                    ? `${process.env.REACT_APP_API_BASE_URL}${this.props.user.imageUrl}`
+                                    ? `${API_BASE_URL}${this.props.user.imageUrl}`
                                     : this.props.user.imageUrl || "https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg"
                                 }
                                 alt="profile"

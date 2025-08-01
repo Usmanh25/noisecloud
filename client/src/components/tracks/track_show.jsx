@@ -5,7 +5,7 @@ import CommentItemContainer from "../comments/comment_item_container";
 import PlayButtonContainer from "../play_button/play_button_container";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 class TrackShow extends React.Component {
 
@@ -37,7 +37,7 @@ class TrackShow extends React.Component {
                         <img
                             src={
                                 track.imageUrl?.startsWith("/rails")
-                                ? `${process.env.REACT_APP_API_BASE_URL}${track.imageUrl}`
+                                ? `${API_BASE_URL}${track.imageUrl}`
                                 : track.imageUrl
                             }
                             alt="song-image"
@@ -86,7 +86,7 @@ class TrackShow extends React.Component {
                                     alt={this.props.track.title}
                                     src={
                                         this.props.track.imageUrl?.startsWith("/rails")
-                                        ? `${process.env.REACT_APP_API_BASE_URL}${this.props.track.imageUrl}`
+                                        ? `${API_BASE_URL}${this.props.track.imageUrl}`
                                         : this.props.track.imageUrl
                                     }
                                 />

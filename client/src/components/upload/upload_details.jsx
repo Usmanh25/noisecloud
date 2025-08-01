@@ -1,5 +1,7 @@
 import React from 'react';
 
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
 class UploadDetails extends React.Component {
     render() {
         const preview = this.props.state.imageUrl
@@ -7,7 +9,7 @@ class UploadDetails extends React.Component {
                 <img
                     src={
                         this.props.state.imageUrl.startsWith("/rails")
-                            ? `${process.env.REACT_APP_API_BASE_URL}${this.props.state.imageUrl}`
+                            ? `${API_BASE_URL}${this.props.state.imageUrl}`
                             : this.props.state.imageUrl
                     }
                     className="song-artwork-upload2"

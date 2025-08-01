@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom"
 
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
 
 class UploadSuccess extends React.Component {
     constructor(props) {
@@ -20,7 +22,7 @@ class UploadSuccess extends React.Component {
                             className="upload-song-pic"
                             src={
                                 this.props.state.imageUrl?.startsWith("/rails")
-                                ? `${process.env.REACT_APP_API_BASE_URL}${this.props.state.imageUrl}`
+                                ? `${API_BASE_URL}${this.props.state.imageUrl}`
                                 : this.props.state.imageUrl
                             }
                             alt=""

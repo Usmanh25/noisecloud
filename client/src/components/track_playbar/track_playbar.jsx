@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause, faStepBackward, faRedoAlt, faVolumeMute, faVolumeDown, faVolumeUp  } from "@fortawesome/free-solid-svg-icons";
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 class TrackPlaybar extends React.Component {
   constructor(props) {
@@ -180,7 +181,7 @@ class TrackPlaybar extends React.Component {
                 ref={this.audioRef} 
                 id="audio" 
                 autoPlay
-                src={this.props.currentTrack.audioUrl}
+                src={`${API_BASE_URL}${this.props.currentTrack.audioUrl}`}
                 loop={this.state.loop}
                 muted={this.state.muted}
                 onLoadedMetadata={this.setDuration}
@@ -206,15 +207,7 @@ class TrackPlaybar extends React.Component {
           </div>
           <div className="playbar-track-item">
             <Link className="track-art" to={`/tracks/${this.props.currentTrack.id}`}>
-              <img 
-                src={
-                  this.props.currentTrack.imageUrl.startsWith('/rails') 
-                    ? `${process.env.REACT_APP_API_BASE_URL}${this.props.currentTrack.imageUrl}` 
-                    : this.props.currentTrack.imageUrl
-                } 
-                alt={this.props.currentTrack.title} 
-              />
-              {/* <img src={this.props.currentTrack.imageUrl}/> */}
+              <img src={`${API_BASE_URL}${this.props.currentTrack.imageUrl}`} />
             </Link>
             <div className="track-info">
               <span className='artist'>{this.props.currentTrack.artist}</span>
