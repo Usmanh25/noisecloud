@@ -94,6 +94,8 @@ Rails.application.configure do
   
   config.active_record.dump_schema_after_migration = false
   
+  config.action_dispatch.cookies_same_site_protection = :none
+
   config.action_dispatch.default_headers.merge!({
     'Access-Control-Allow-Credentials' => 'true'
   })
