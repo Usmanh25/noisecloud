@@ -13,6 +13,14 @@ class Api::SessionsController < ApplicationController
         end
     end
 
+    def show
+        if current_user
+            render 'api/users/show'
+        else
+            render json: { errors: ["Not logged in"] }, status: :unauthorized
+        end
+    end
+
     def destroy
         @user = current_user
         if @user

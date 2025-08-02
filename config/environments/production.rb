@@ -88,9 +88,15 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
+  Rails.application.routes.default_url_options[:host] = 'https://songcloud-e382.onrender.com'
 
   # Do not dump schema after migrations.
+  
   config.active_record.dump_schema_after_migration = false
+  
+  config.action_dispatch.default_headers.merge!({
+    'Access-Control-Allow-Credentials' => 'true'
+  })
   Rails.application.routes.default_url_options[:host] = 'https://songcloud-e382.onrender.com'
 
 end
