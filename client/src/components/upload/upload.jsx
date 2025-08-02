@@ -138,29 +138,6 @@ class Upload extends React.Component {
     );
   }
   
-  // render() {
-  //   const { page } = this.state;
-
-  //   return (
-  //     <div className="upload">
-  //       {page === 0 && (
-  //         <UploadDetails
-  //           changeUpload={this.changeUpload}
-  //           state={this.state}
-  //           update={this.update}
-  //           handleFile={this.handleFile}
-  //           handleSubmit={this.handleSubmit}
-  //         />
-  //       )}
-  //       {page === 2 && (
-  //         <UploadSuccess
-  //           state={this.state}
-  //           currentUser={this.props.currentUser}
-  //         />
-  //       )}
-  //     </div>
-  //   );
-  // }
 }
 
 export default Upload;

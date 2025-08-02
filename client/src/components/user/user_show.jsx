@@ -38,7 +38,20 @@ class UserShow extends React.Component {
                     <div className = "track-list-item-container">
                         <div className="track-image-container">
                             <Link to = {`/tracks/${track.id}`}>
-                                <img src= {track.imageUrl} alt="track-photo" className = "track-image"/>
+
+                                {/* <img src= {track.imageUrl} alt="track-photo" className = "track-image"/> */}
+
+                                <img
+                                    src={
+                                        track.imageUrl?.startsWith("/rails")
+                                        ? `${API_BASE_URL}${track.imageUrl}`
+                                        : track.imageUrl || "https://noisecloud-seeds.s3.us-west-1.amazonaws.com/default-track-cover.jpg"
+                                    }
+                                    alt="track-photo"
+                                    className="track-image"
+                                />
+
+                            
                             </Link>
                         </div>
                         <div className = "play-button">
