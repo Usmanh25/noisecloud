@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause, faStepBackward, faRedoAlt, faVolumeMute, faVolumeDown, faVolumeUp  } from "@fortawesome/free-solid-svg-icons";
-const API_BASE_URL = "";
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
 class TrackPlaybar extends React.Component {
   constructor(props) {
     super(props);

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom"
 
-const API_BASE_URL = "";
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
 
 class UploadSuccess extends React.Component {
     constructor(props) {

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const API_BASE_URL = "";
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
 class UploadDetails extends React.Component {
     render() {
         const preview = this.props.state.imageUrl

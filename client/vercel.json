@@ -3,9 +3,6 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "https://songcloud-e382.onrender.com/api/$1"
-    }
+    { "source": "/api/:match*", "destination": "https://songcloud-e382.onrender.com/api/:match*" }
   ]
 }
