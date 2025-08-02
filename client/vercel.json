@@ -3,6 +3,9 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/(.*)",
+      "destination": "https://songcloud-e382.onrender.com/api/$1"
+    }
   ]
 }

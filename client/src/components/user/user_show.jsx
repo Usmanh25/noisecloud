@@ -5,8 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FaTrash } from 'react-icons/fa';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL;
-
+const API_BASE_URL = "";
 class UserShow extends React.Component {
 
     constructor(props) {
