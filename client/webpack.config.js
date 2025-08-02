@@ -1,21 +1,17 @@
-require('dotenv').config({ path: '.env.production' });
-
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+require('dotenv').config({ path: path.resolve(__dirname, '.env.production') });
 
 module.exports = {
   entry: './src/noiseCloud.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/', // Needed for client-side routing
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    fallback: {
-      process: false, // Prevent webpack from bundling node's process polyfill
-    },
   },
   module: {
     rules: [
