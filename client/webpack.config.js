@@ -36,7 +36,7 @@ module.exports = {
       template: './public/index.html',
     }),
     new webpack.DefinePlugin({
-      'process.env.REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL || ''),
+      'process.env.REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL || "https://songcloud-e382.onrender.com"),
     }),
     // new CopyWebpackPlugin({
     // patterns: [
