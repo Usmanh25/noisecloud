@@ -15,7 +15,7 @@ class Api::SessionsController < ApplicationController
 
     def show
         if current_user
-            render 'api/users/show'
+            render json: current_user
         else
             render json: { errors: ["Not logged in"] }, status: :unauthorized
         end

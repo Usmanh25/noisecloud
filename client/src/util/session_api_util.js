@@ -1,5 +1,13 @@
 import API_BASE_URL from './config';
 
+export const fetchSession = () => {
+  return $.ajax({
+    method: "GET",
+    url: `${API_BASE_URL}/api/session`,
+    xhrFields: { withCredentials: true },
+  });
+};
+
 export const signup = user => (
   $.ajax({
     method: 'POST',
