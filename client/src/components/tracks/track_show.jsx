@@ -16,11 +16,20 @@ class TrackShow extends React.Component {
     }
     
     componentDidMount() {
-        this.props.fetchTrack(this.props.match.params.trackId)
+        this.props.fetchTrack(this.props.match.params.trackId);
         this.props.fetchTracks();
-        // this.props.fetchComments(this.props.match.params.commentId)
-        // this.props.fetchComments()
-    };
+        this.props.fetchComments(this.props.match.params.trackId);
+    }
+
+    componentDidUpdate(prevProps) {
+        const oldId = prevProps.match.params.trackId;
+        const newId = this.props.match.params.trackId;
+
+        if (oldId !== newId) {
+            this.props.fetchTrack(newId);
+            this.props.fetchComments(newId);
+        }
+    }
   
     
     render() {
@@ -110,7 +119,7 @@ class TrackShow extends React.Component {
                     <div>
                         <CommentItemContainer
                             currentUser={this.props.currentUser}
-                            track={this.props.track}
+                            track={this.props.track.id}
                         />
                     </div>
                 </div>
