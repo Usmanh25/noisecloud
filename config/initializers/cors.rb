@@ -1,10 +1,10 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://songcloud-v3.vercel.app', 'http://localhost:3000'
+    origins 'https://songcloud-v3.vercel.app', 'http://localhost:3000', 'http://localhost:5173'
 
     resource '*',
       headers: :any,
-      credentials: true,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      credentials: true 
   end
 end

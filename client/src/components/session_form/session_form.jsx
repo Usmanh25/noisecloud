@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
             <div className="login-form-container">
               <form onSubmit={this.handleSubmit} className="login-form-box">
                 <br/>
-                <div modal-social-login>
+                <div modal-social-login='true'>
                     <input className="modal-button1"
                       type='submit'
                       value='Continue with Demo'

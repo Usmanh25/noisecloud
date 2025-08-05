@@ -5,7 +5,7 @@
   "main": "src/noiseCloud.jsx",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve"
+    "start": "webpack serve --mode development --port 5173 --open"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",

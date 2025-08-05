@@ -22,55 +22,46 @@ function timeAgo(dateString) {
 
 class CommentItem extends React.Component {
     render() {
-        const { comments, currentUser, deleteComment } = this.props;
-        if (!comments) return null;
+    const { comment, currentUser, deleteComment } = this.props;
+    if (!comment) return null;
 
-        return (
-            <div className="comments-index-container">
-                <ul className="list">
-                    {[...comments].reverse().map((comment, i) => {                        
-                        const commenterName = comment.commenter_username || 'unknown';
-                        const timePosted = timeAgo(comment.created_at);
+    const commenterName = comment.commenter_username || 'unknown';
+    const timePosted = timeAgo(comment.created_at);
 
-                        return (
-                            <li key={i}>
-                                <div className="comment-obj-container">
-                                    <div className="comment-obj">
-                                        <Link to={`/users/${comment.commenter_id}`}>
-                                            <img className="comment-profile-pic" alt='' />
-                                        </Link>
+    return (
+      <li>
+        <div className="comment-obj-container">
+          <div className="comment-obj">
+            <Link to={`/users/${comment.commenter_id}`}>
+              <img className="comment-profile-pic" alt='' />
+            </Link>
 
-                                        <div className="comment-body-wrapper">
-                                            <div className="comment-meta">
-                                                <Link 
-                                                    className="comment-commenter-username" 
-                                                    to={`/users/${comment.commenter_id}`}>
-                                                    @{commenterName}
-                                                </Link>
-                                                <span className="comment-time"> - {timePosted}</span>
-                                            </div>
-                                            <div className="comment-body-text">
-                                                {comment.body}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {currentUser?.id === comment.commenter_id && (
-                                        <div className="comment-obj-right">
-                                            <button onClick={() => deleteComment(comment.id)}>
-                                                {/* <FaTrash className="track-delete" /> */}
-                                                <FaTrash size={18} color="red" />
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
-                            </li>
-                        );
-                    })}
-                </ul>
+            <div className="comment-body-wrapper">
+              <div className="comment-meta">
+                <Link 
+                  className="comment-commenter-username" 
+                  to={`/users/${comment.commenter_id}`}>
+                  @{commenterName}
+                </Link>
+                <span className="comment-time"> - {timePosted}</span>
+              </div>
+              <div className="comment-body-text">
+                {comment.body}
+              </div>
             </div>
-        );
-    }
+          </div>
+
+          {currentUser?.id === comment.commenter_id && (
+            <div className="comment-obj-right">
+              <button onClick={() => deleteComment(comment.id)}>
+                <FaTrash size={18} color="red" />
+              </button>
+            </div>
+          )}
+        </div>
+      </li>
+    );
+  }
 }
 
 export default CommentItem;

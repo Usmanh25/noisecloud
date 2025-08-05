@@ -5,7 +5,7 @@ import CommentItemContainer from "../comments/comment_item_container";
 import PlayButtonContainer from "../play_button/play_button_container";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-const API_BASE_URL = process.env.REACT_APP_API_URL;
+const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
 class TrackShow extends React.Component {
 
     constructor(props) {
@@ -42,6 +42,8 @@ class TrackShow extends React.Component {
         const genreRecommended = this.props.tracks.filter(track => track.genre === this.props.track.genre && track.id !== this.props.track.id);
         const threeItems = genreRecommended.slice(0,3);
         const renderItems = threeItems.map( (track, idx) => {
+        console.log("TrackShow render - this.props.track:", this.props.track);
+
         return ( 
                 <li className = 'related-genre-item' key = {`song-${idx}`}>
                     
@@ -119,7 +121,7 @@ class TrackShow extends React.Component {
                     <div>
                         <CommentItemContainer
                             currentUser={this.props.currentUser}
-                            track={this.props.track.id}
+                            track={this.props.track}
                         />
                     </div>
                 </div>

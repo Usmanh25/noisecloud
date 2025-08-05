@@ -4,7 +4,7 @@ import PlayButtonContainer from "../play_button/play_button_container";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-const API_BASE_URL = process.env.REACT_APP_API_URL;
+const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
 
 const Discover = ({ fetchTracks, tracks }) => {
   useEffect(() => {

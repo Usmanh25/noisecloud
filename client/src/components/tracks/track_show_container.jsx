@@ -21,7 +21,7 @@ const mDTP = (dispatch) => {
         fetchTrack: trackId => dispatch(fetchTrack(trackId)),
         fetchTracks: () => dispatch(fetchTracks()),
         deleteTrack: trackId => dispatch(deleteTrack()),
-        fetchComments: () => dispatch(fetchComments())
+        fetchComments: (trackId) => dispatch(fetchComments(trackId))
     }
 }
 

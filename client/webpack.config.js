@@ -1,8 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-require('dotenv').config({ path: path.resolve(__dirname, '.env.production') });
+const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.env.development';
+require('dotenv').config({ path: path.resolve(__dirname, envFile) });
+
+const fallbackApiUrl =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000'
+    : 'https://songcloud-e382.onrender.com';
+
 
 module.exports = {
   entry: './src/noiseCloud.jsx',
@@ -36,26 +42,21 @@ module.exports = {
       template: './public/index.html',
     }),
     new webpack.DefinePlugin({
-      'process.env.REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL || "https://songcloud-e382.onrender.com"),
+      'process.env.REACT_APP_API_URL': JSON.stringify(
+        process.env.REACT_APP_API_URL || fallbackApiUrl
+      ),
     }),
-    // new CopyWebpackPlugin({
-    // patterns: [
-    //   {
-    //     from: 'public',
-    //     to: '.',
-    //     globOptions: {
-    //       ignore: ['**/index.html'],
-    //     },
-    //   },
-    // ],
-  // }),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
+
   ],
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
     },
     historyApiFallback: true,
-    port: 3000,
+    port: 5173,
   },
   mode: 'production',
 };

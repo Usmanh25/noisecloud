@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
     resource :session, only: [:create, :destroy, :show]
 
-    resources :tracks, only: [:index, :show, :create, :update, :destroy]
+    resources :tracks, only: [:index, :show, :create, :update, :destroy] do
+      resources :comments, only: [:index]  # <-- This adds /api/tracks/:track_id/comments
+    end    
+    
     resources :comments, only: [:create, :destroy, :index]
   end
 

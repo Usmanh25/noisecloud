@@ -14,19 +14,20 @@ class CommentForm extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
 
-    handleSubmit (e) {
+    handleSubmit(e) {
         e.preventDefault();
-            
+
         const comment = {
             body: this.state.body,
-            track_id: this.state.track_id
-
+            track_id: this.props.commentTrackId,
+            user_id: this.props.currentUser.id
         };
 
-        this.props.createComment(comment).then(() => {
-            this.setState({ body: "" }); // ✅ this works now
-        });
-    };
+        this.props.createComment(comment)
+            .then(() => {
+                this.setState({ body: "" }); // clear input only after success
+            });
+    }
 
     render () {
 

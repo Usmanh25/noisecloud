@@ -32,7 +32,11 @@ export const fetchComments = (trackId) => dispatch => {
 
 export const createComment = comment => dispatch => {
     return CommentApiUtil.createComment(comment)
-        .then(comment => dispatch(receiveComment(comment)))
+        .then(newComment => {
+        // Normalize trackId
+        newComment.trackId = newComment.track_id;
+        return dispatch(receiveComment(newComment));
+    });
 }
 
 export const deleteComment = commentId => dispatch => {

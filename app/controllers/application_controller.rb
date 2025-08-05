@@ -4,15 +4,13 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :logged_in?
 
+  
   def current_user
     return @current_user if defined?(@current_user)
 
-    token = session[:session_token]
-    if token.present?
-      @current_user = User.find_by(session_token: token)
-    else
-      @current_user = nil
-    end
+    token = session[:session_token] || request.headers['Authorization']
+    @current_user = User.find_by(session_token: token)
+    
   end
 
   def logged_in?

@@ -1,8 +1,8 @@
-# NoiseCloud
+# SongCloud
 
-[noisecloud Live on Heroku](https://noisecloud.herokuapp.com/#/)
+[SongCloud Live on Vercel](https://songcloud-v3.vercel.app)
 
-NoiseCloud is a full-stack clone of the popular music-streaming platform SoundCloud, where users can stream music and upload their own music content to the web
+SongCloud is a full-stack clone of the popular music-streaming platform SoundCloud, where users can stream music and upload their own music content to the web
 
 <img src="app/assets/images/SplashPage.png"></img>
 
@@ -86,7 +86,7 @@ const mapDispatchToProps = dispatch => ({
 
 ## Uploading Tracks
 
-Users can upload tracks to NoiseCloud, provided a title, artist, and genre. Much like SoundCloud, if an image is not provided, their profile photo will be assigned to the track. The track will then be listed on the user's profile page.
+Users can upload tracks to SongCloud, provided a title, artist, and genre. Much like SoundCloud, if an image is not provided, their profile photo will be assigned to the track. The track will then be listed on the user's profile page.
 
 <img src="app/assets/images/UploadPage.png"></img>
 
