@@ -17,6 +17,7 @@ gem 'rack-cors'
 gem 'aws-sdk-s3'
 gem 'active_storage_validations'
 gem 'terser'
+gem 'faker'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
