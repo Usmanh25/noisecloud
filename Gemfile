@@ -4,7 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.7'
+gem 'rails', '~> 6.1.7.10'
+
+# Add this line to specify a compatible nio4r version
+gem 'nio4r', '~> 2.6'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -17,7 +21,6 @@ gem 'rack-cors'
 gem 'aws-sdk-s3'
 gem 'active_storage_validations'
 gem 'terser'
-gem 'faker'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
