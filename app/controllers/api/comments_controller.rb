@@ -36,6 +36,7 @@
 #         params.require(:comment).permit(:body, :commenter_id, :track_id)
 #     end
 # end
+
 class Api::CommentsController < ApplicationController
   def create
     unless current_user
