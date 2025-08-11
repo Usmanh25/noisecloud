@@ -31,18 +31,19 @@ export const signup = user => dispatch => (
 )
 
 export const login = user => dispatch => (
-    SessionApiUtil.login(user).then(user => (
-      dispatch(receiveCurrentUser(user))
-    ), err => (
-      dispatch(receiveSessionErrors(err.responseJSON))
-    ))
+  SessionApiUtil.login(user).then(user => (
+    dispatch(receiveCurrentUser(user))
+  ), err => (
+    dispatch(receiveSessionErrors(err.responseJSON))
+  ))
 );
 
-export const logout = () => dispatch => (
-    SessionApiUtil.logout().then(user => (
-      dispatch(logoutCurrentUser())
-    ))
-);
+export const logout = () => dispatch => {
+  localStorage.removeItem('jwtToken');
+  return SessionApiUtil.logout().then(() => (
+    dispatch(logoutCurrentUser())
+  ));
+};
 
 export const fetchSession = () => dispatch => (
   SessionApiUtil.fetchSession()

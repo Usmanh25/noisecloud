@@ -1,36 +1,27 @@
-class ApplicationController < ActionController::Base
-  # Only skip CSRF for JSON (API) requests
-  skip_before_action :verify_authenticity_token, if: -> { request.format.json? }
+class ApplicationController < ActionController::API
+  before_action :authenticate_request
 
-  helper_method :current_user, :logged_in?
+  attr_reader :current_user
 
-  
-  def current_user
-    return @current_user if defined?(@current_user)
+  private
 
-    token = session[:session_token] || request.headers['Authorization']
-    @current_user = User.find_by(session_token: token)
-    
-  end
-
-  def logged_in?
-    !!current_user
-  end
-
-  def require_logged_in
-    unless logged_in?
-      render json: { errors: ["Not logged in"] }, status: :unauthorized
+  def authenticate_request
+    header = request.headers['Authorization']
+    token = header.split(' ').last if header
+    decoded = JsonWebToken.decode(token) rescue nil
+    if decoded
+      @current_user = User.find_by(id: decoded[:user_id])
     end
+
+    render json: { errors: ['Not Authenticated'] }, status: :unauthorized unless @current_user
   end
 
   def login!(user)
-    session[:session_token] = user.reset_session_token!
-    @current_user = user
+    token = JsonWebToken.encode(user_id: user.id)
+    render json: { token: token, user: user }
   end
 
   def logout!
-    current_user&.reset_session_token!
-    session[:session_token] = nil
-    @current_user = nil
+    # Stateless JWT — no action needed here
   end
 end

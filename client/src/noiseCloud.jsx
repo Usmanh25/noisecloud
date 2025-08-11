@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root";
-import { login } from './actions/session_actions';
+import { receiveCurrentUser, logoutCurrentUser } from './actions/session_actions';
 import './styles/application.scss';
 import API_BASE_URL from './util/config';
-import $ from 'jquery';  // Make sure jquery is imported here
+import $ from 'jquery';
 
 const renderApp = (store) => {
   const root = document.getElementById("root");
@@ -15,23 +15,16 @@ const renderApp = (store) => {
 document.addEventListener("DOMContentLoaded", async () => {
   let store;
 
-  if (window.currentUser) {
-    const preloadedState = {
-      entities: {
-        users: { [window.currentUser.id]: window.currentUser }
-      },
-      session: { id: window.currentUser.id }
-    };
-    store = configureStore(preloadedState);
-    delete window.currentUser;
-    renderApp(store);
-  } else {
+  // Check localStorage for JWT token
+  const token = localStorage.getItem('jwtToken');
+
+  if (token) {
     try {
-      // Use jQuery ajax here with dynamic API_BASE_URL and withCredentials
+      // Fetch current user with Authorization header set
       const user = await $.ajax({
         method: "GET",
         url: `${API_BASE_URL}/api/session`,
-        xhrFields: { withCredentials: true },
+        headers: { Authorization: `Bearer ${token}` },
       });
 
       const preloadedState = {
@@ -43,13 +36,38 @@ document.addEventListener("DOMContentLoaded", async () => {
       store = configureStore(preloadedState);
     } catch (err) {
       console.error("Session fetch failed:", err);
+      localStorage.removeItem('jwtToken');
       store = configureStore();
     }
-
-    renderApp(store);
+  } else {
+    store = configureStore();
   }
 
+  renderApp(store);
+
+  // Expose these for debugging/testing
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.login = login;
+
+  // Wrap login and logout to handle token storage/cleanup
+
+  window.login = async (userCredentials) => {
+    try {
+      const res = await $.ajax({
+        method: 'POST',
+        url: `${API_BASE_URL}/api/session`,
+        data: { user: userCredentials }
+      });
+      localStorage.setItem('jwtToken', res.token);
+      store.dispatch(receiveCurrentUser(res.user));
+      return res.user;
+    } catch (e) {
+      throw e;
+    }
+  };
+
+  window.logout = () => {
+    localStorage.removeItem('jwtToken');
+    store.dispatch(logoutCurrentUser());
+  };
 });

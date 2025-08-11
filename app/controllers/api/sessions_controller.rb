@@ -1,34 +1,30 @@
 class Api::SessionsController < ApplicationController
-    
-    def create
-        @user = User.find_by_credentials(
-            params[:user][:email],
-            params[:user][:password]
-        )
-        if @user
-            login!(@user)
-            render 'api/users/show'
-        else
-            render json: ["Invalid email or password"], status: 401
-        end
-    end
+  skip_before_action :authenticate_request, only: [:create]
 
-    def show
-        if current_user
-            render json: current_user
-        else
-            render json: { errors: ["Not logged in"] }, status: :unauthorized
-        end
-    end
+  def create
+    @user = User.find_by_credentials(
+      params[:user][:email],
+      params[:user][:password]
+    )
 
-    def destroy
-        @user = current_user
-        if @user
-            logout!
-            render json: {}
-        else
-            render json: ["Page not found"], status: 404
-        end
+    if @user
+      token = JsonWebToken.encode(user_id: @user.id)
+      render json: { token: token, user: @user }
+    else
+      render json: ["Invalid email or password"], status: :unauthorized
     end
+  end
 
+  def show
+    if current_user
+      render json: current_user
+    else
+      render json: { errors: ["Not logged in"] }, status: :unauthorized
+    end
+  end
+
+  def destroy
+    # Stateless JWT: client deletes token, so just respond success
+    render json: {}
+  end
 end
