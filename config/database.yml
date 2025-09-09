@@ -14,4 +14,5 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  sslmode: require
+  sslmode: verify-full
+  sslrootcert: <%= Rails.root.join("config/ssl/root.crt") %>
