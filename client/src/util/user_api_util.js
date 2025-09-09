@@ -1,4 +1,3 @@
-// user_api_util.js
 import API_BASE_URL from './config';
 
 const getAuthHeaders = () => {

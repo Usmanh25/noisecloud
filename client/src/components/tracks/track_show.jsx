@@ -10,9 +10,6 @@ class TrackShow extends React.Component {
 
     constructor(props) {
         super(props);
-        // this.state = {
-        //     ...this.props.track
-        // }
     }
     
     componentDidMount() {
@@ -57,7 +54,6 @@ class TrackShow extends React.Component {
                             alt="song-image"
                             className="related-image"
                         />
-                        {/* <img src= {track.imageUrl} alt= "song-image" className = 'related-image'/> */}
                     </Link>
 
                     <div className = 'genre-song-info'>
@@ -104,7 +100,6 @@ class TrackShow extends React.Component {
                                         : this.props.track.imageUrl
                                     }
                                 />
-                                {/* <img className="track-header-img" src={this.props.track.imageUrl} /> */}
                             </div>
                         </div>
                     </div>

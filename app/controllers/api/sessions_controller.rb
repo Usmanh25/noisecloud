@@ -24,7 +24,6 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-    # Stateless JWT: client deletes token, so just respond success
     render json: {}
   end
 end

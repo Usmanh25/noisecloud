@@ -27,7 +27,6 @@ class UploadSuccess extends React.Component {
                             }
                             alt=""
                         />
-                        {/* <img className="upload-song-pic" src={this.props.state.imageUrl} alt=""/> */}
                         
                         <div className="upload-info">
                             <div className="upload-text-group">

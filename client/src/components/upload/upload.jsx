@@ -64,7 +64,7 @@ class Upload extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     
-    this.setState({ uploadStatus: true }); // start spinner
+    this.setState({ uploadStatus: true }); 
 
     const formData = new FormData();
     formData.append('track[title]', this.state.title);
@@ -84,7 +84,7 @@ class Upload extends React.Component {
           trackId: track.id,
           trackUrl: track.track_url,
           photoUrl: track.image_url,
-          userId: this.state.uploader_id, // add this
+          userId: this.state.uploader_id, 
           uploadStatus: false,
           errors: [],
           imageError: ''

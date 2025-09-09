@@ -24,7 +24,6 @@ class UserShow extends React.Component {
         const userTracks = this.props.tracks
             .filter(track => track.uploader_id === this.props.user.id)
             .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-        // const userTracks = this.props.tracks.filter(track => track.uploader_id === this.props.user.id)
        
         const trackItems = userTracks.length > 0 ? userTracks.map((track,idx) => {
             let num = idx + 1;
@@ -38,8 +37,6 @@ class UserShow extends React.Component {
                         <div className="track-image-container">
                             <Link to = {`/tracks/${track.id}`}>
 
-                                {/* <img src= {track.imageUrl} alt="track-photo" className = "track-image"/> */}
-
                                 <img
                                     src={
                                         track.imageUrl?.startsWith("/rails")
@@ -49,7 +46,6 @@ class UserShow extends React.Component {
                                     alt="track-photo"
                                     className="track-image"
                                 />
-
                             
                             </Link>
                         </div>
@@ -96,12 +92,6 @@ class UserShow extends React.Component {
                                 alt="profile"
                                 className="user-profile-pic"
                             />
-                            {/* <img
-                            src="https://noisecloud-seeds.s3.us-west-1.amazonaws.com/Profile.jpg"
-                            alt="profile"
-                            className="user-profile-pic"
-                            /> */}
-                            
                             <div className = "username-container">
                                 <span className = "username">{this.props.user.email.slice(0, this.props.user.email.indexOf('@'))}</span>
                             </div>

@@ -232,8 +232,8 @@
 }
 
 .upload-button-upload:hover {
-    background-color: rgb(185, 185, 185); /* light grey on hover */
-    transition: background-color 0.5s ease; /* 👈 this is the key */
+    background-color: rgb(185, 185, 185);
+    transition: background-color 0.5s ease; 
     color: black;
 
 }
@@ -329,10 +329,6 @@ input[type="file"] {
   max-width: 100%; 
 }
 
-
-// _________________________________________UPLOAD SUCCESS__________________________________________________________________
-
-
 .success-main {
     width: 1240px;
     height: 100vh;
@@ -344,7 +340,6 @@ input[type="file"] {
     padding-top: 10%;
 }
 
-    
 .current-song-success {
     width: 748px;
     min-height: 250px;
@@ -417,7 +412,7 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* align to left of the right box */
+  align-items: flex-start;
   gap: 10px;
   flex-grow: 1;
 }

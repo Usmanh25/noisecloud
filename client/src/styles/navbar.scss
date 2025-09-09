@@ -8,7 +8,6 @@
 	left: 0;
 	z-index: 1000;
 	overflow-x: hidden;
-
 }
 
 .nav-left,
@@ -72,8 +71,8 @@
 	font-size: 14px;
 	font-weight: bold;
 	transition: color 0.2s ease;
-	// padding: 10px;
 }
+
 .header-nav:hover {
 	color: #fff;
 }

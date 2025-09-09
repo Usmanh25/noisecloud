@@ -15,12 +15,10 @@ const renderApp = (store) => {
 document.addEventListener("DOMContentLoaded", async () => {
   let store;
 
-  // Check localStorage for JWT token
   const token = localStorage.getItem('jwtToken');
 
   if (token) {
     try {
-      // Fetch current user with Authorization header set
       const user = await $.ajax({
         method: "GET",
         url: `${API_BASE_URL}/api/session`,
@@ -45,11 +43,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   renderApp(store);
 
-  // Expose these for debugging/testing
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
-  // Wrap login and logout to handle token storage/cleanup
 
   window.login = async (userCredentials) => {
     try {

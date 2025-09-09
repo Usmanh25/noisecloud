@@ -35,7 +35,6 @@ const commentsReducer = (state = {}, action) => {
       return nextState;
 
     case RECEIVE_TRACK:
-      // Fix here: convert comments object to array before iterating
       const commentsObj = action.track.comments || {};
       const newComments = Object.values(commentsObj);
       newComments.forEach(comment => {

@@ -19,10 +19,6 @@ class UploadDetails extends React.Component {
             : <span className="song-artwork-upload"></span>;
 
 
-        // const preview = this.props.state.imageUrl
-        //     ? <img src={this.props.state.imageUrl} className="song-artwork-upload2" alt="song preview" />
-        //     : <span className="song-artwork-upload"></span>;
-
         if (this.props.state.page === 0) {
             return (
                 <div className="upload-main">
@@ -83,7 +79,7 @@ class UploadDetails extends React.Component {
                                     <option value="EDM">EDM</option>
                                 </select>
 
-                                {/* ✅ NEW AUDIO UPLOAD INPUT */}
+                                {/* NEW AUDIO UPLOAD INPUT */}
                                 <p style={{ marginTop: "20px" }}>.MP3 File</p>
                                 <input
                                     type="file"

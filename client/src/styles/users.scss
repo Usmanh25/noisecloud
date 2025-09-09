@@ -1,7 +1,3 @@
-// // Place all the styles related to the Users controller here.
-// // They will automatically be included in application.css.
-// // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .track-delete {
   color: red;
   visibility: hidden;
@@ -13,13 +9,10 @@
 }
 
 .track-list-item {
-    // background-color: blue;
     display: flex;
-    // width: 100%;
     margin-bottom: 20px;
-    // margin-left: 0;
-    // padding-left: 0;
 }
+
 .track-list-item:hover {
     .track-delete {
         visibility: visible;
@@ -29,20 +22,15 @@
 
 .track-list-item a {
     display: flex;
-    // background-color: pink;
     padding-left: 0;
-    // width: 50%;
-    // height: 50%;
     text-decoration: none;
 }
-
 
 .track-list-item-container {
     display: flex;
     align-items: center;
     width: 100%;
     margin-left: 0;
-    padding-left: 0;    // margin-left: 30px; /* tweak this value to match "first-upload" */
 }
 
 .track-list-text-container {
@@ -71,13 +59,12 @@
 
 .track-image-container {
     border-radius: 5px;
-
 }
 
 .track-info {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertically center within the parent */
+    justify-content: center; 
     font-family: Interstate, Lucida Grande, Arial, sans-serif;
 }
 
@@ -85,15 +72,12 @@
     font-size: 14px;
     color: white;
     font-weight: bold;
-    // margin-bottom: 2px; /* tighten spacing */
 }
+
 .track-list-title:hover {
     font-size: 14px;
     color: #666;
-    // margin-bottom: 2px; /* tighten spacing */
-    
 }
-
 
 .track-artist-user {
     font-weight: bold;
@@ -105,7 +89,6 @@
 .track-artist-user:hover {
     font-size: 13px;
     color: #666;
-    // margin-top: 0px; /* remove extra spacing */
 }
 
 .play-button {
@@ -150,7 +133,7 @@
     width: 1080px;
     height: 275px;
     display: flex;
-    align-items: center; /* vertica hover l centering */
+    align-items: center; 
     justify-content: flex-start;
     overflow: hidden;
 }
@@ -207,47 +190,34 @@
     font-size: 24px;
     background-color: #333;
     color: white;
-    // margin-left: 25px;
 }
 
 .user-bottom {
-    // background-color: blue;
     width: 1080px;
 
-    // padding-bottom: 50px;
 }
 
 .uploaded-tracks-container {
-    width: 100%;  /* or keep consistent with .user-tracks-list */
-    // margin-left: 0;
-    // padding-left: 0;
+    width: 100%;  
     margin-top: 38px;
     margin-bottom: 28px;
 }
 
 .uploaded-tracks {
     font-size: 22px;
-    // font-weight: 300;
 	font-family: Interstate, Lucida Grande, Arial, sans-serif;
-    // margin-left: 70px;
-    // background-color: aqua;
-    // padding: 0px 20px 80px 1000px;
-    // margin-top: 800px;
     color: white;
-    // border-bottom: 1px solid black;
 }
 
 .user-tracks{
     display: flex;
     padding-top: 0px;
-    // background-color: red;
 }
 
 .user-tracks-list {
-    width: 100%; /* take up the full row */
+    width: 100%; 
     display: flex;
     flex-direction: column;
-    // background-color: orange;
     margin-left: 0;
     padding-left: 0;
 }
@@ -283,13 +253,11 @@
 .meet-the-creator-user {
     text-align: left;
     width: 90%;
-    // border-bottom: 1px solid gray;
     color: white;
     font-weight: bold;
 	font-family: Interstate, Lucida Grande, Arial, sans-serif;
     font-size: 16px;
     padding-bottom: 10px;
-    // text-align: center;
 }
 
 .links-container {
@@ -321,8 +289,6 @@
     width: 50px;
     color: white;
 }
-
-
 
 .fine-print2 {
     margin-bottom: 40px;
