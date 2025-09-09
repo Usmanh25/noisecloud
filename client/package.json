@@ -6,6 +6,10 @@
     "build": "webpack --mode production",
     "start": "webpack serve --mode development --port 5173 --open"
   },
+    "engines": {
+    "node": ">=18",
+    "npm": "6.14.16"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
