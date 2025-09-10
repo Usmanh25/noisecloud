@@ -1,10 +1,10 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://songcloud-v3.vercel.app'  # your frontend origin
+    origins 'https://songcloud-v3.vercel.app', 'http://localhost:5173'
 
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
-      credentials: true  # must be true to allow cookies
+      credentials: true  
   end
 end
