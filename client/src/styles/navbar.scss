@@ -1,110 +1,133 @@
 .navbar {
-	background-color: #121212;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	overflow-x: hidden;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-x: hidden;
 }
 
 .nav-left,
 .nav-right {
-	display: flex;
-	align-items: center;
-	height: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-left {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-	height: 100%;
-	margin-left: 35px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+  margin-left: 35px;
 }
 
 .nav-right {
-	display: flex;
-	align-items: center;
-	gap: 30px; 
-	overflow: hidden;
-	text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* old version of nav-holder kept here for reference
 .nav-holder {
-	display: flex;
-	align-items: center;
-	padding: 0 100px;
-	min-width: 1100px;
-	height: 40px;
-	background-color: #121212;
-	position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+  min-width: 1100px;
+  height: 40px;
+  background-color: #121212;
+  position: relative;
+}
+*/
+
+.nav-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center everything horizontally */
+  gap: 30px; /* Add spacing between nav-left, search, and nav-right */
+  padding: 0 20px; /* Reduce padding so it doesn’t push off-center */
+  height: 50px; /* Slightly taller for breathing room */
+  background-color: #121212;
+  position: relative;
+  width: 100%;
+}
+
+.nav-left,
+.nav-right,
+.discover-search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .firstbar {
-	display: none;
+  display: none;
 }
 
 .logo {
-	font-size: 34px;
-	width: auto;
-	margin-bottom: 10px;
-	color: #ccc;
-	text-decoration: none;
+  font-size: 34px;
+  width: auto;
+  margin-bottom: 10px;
+  color: #ccc;
+  text-decoration: none;
 }
 
 .logo:hover {
-	color: #fff;
+  color: #fff;
 }
 
 .header-nav {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: Interstate, Lucida Grande, Arial, sans-serif;
-	width: auto;
-	text-decoration: none;
-	color: #ccc;
-	background: none;
-	font-size: 14px;
-	font-weight: bold;
-	transition: color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Interstate, Lucida Grande, Arial, sans-serif;
+  width: auto;
+  text-decoration: none;
+  color: #ccc;
+  background: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.2s ease;
+  /* padding: 10px; */
 }
 
 .header-nav:hover {
-	color: #fff;
+  color: #fff;
 }
 
 .discover-search {
-	display: flex;
-	align-items: center;
-	width: 280px;
-	margin-left: 25px;
-	margin-right: 25px;
-	border-radius: 4px;
+  display: flex;
+  align-items: center;
+  width: 280px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 4px;
 }
 
 .discover-search input {
-	width: 100%;
-	padding: 5px 10px;
-	background-color: #333;
-	border: none;
-	color: #eee;
-	font-size: 14px;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: #333;
+  border: none;
+  color: #eee;
+  font-size: 14px;
 }
 
 .header-nav.orange {
-	color: #ff5500;
-	cursor: default;
+  color: #ff5500;
+  cursor: default;
 }
 
 .header-nav.orange:hover {
-	color: #fff;
-	cursor: default; 
+  color: #fff;
+  cursor: default;
 }
 
 .header-nav.no-pointer {
-	cursor: default;
+  cursor: default;
 }

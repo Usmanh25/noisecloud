@@ -1,5 +1,5 @@
 class Api::SessionsController < ApplicationController
-  skip_before_action :authenticate_request, only: [:create]
+  skip_before_action :authenticate_request, only: [:create, :destroy, :show]
 
   def create
     @user = User.find_by_credentials(
@@ -24,6 +24,7 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-    render json: {}
+    # With JWT there’s nothing to invalidate server-side
+    render json: { message: "Logged out successfully" }, status: :ok
   end
 end
